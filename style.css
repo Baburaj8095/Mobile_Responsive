@@ -1,0 +1,803 @@
+
+        #loader1 {
+            position:absolute;
+            left:40%;
+            top:35%;
+            border-radius:20px;
+            padding:5px;
+            border:1px solid #777777;
+            background:#ffffff;
+            box-shadow:0px 0px 10px #777777;
+        }
+
+.sent_img {
+    border-radius: 8px;
+    font-size: 12px;
+    margin: 0;
+    color: rgb(37, 36, 35);
+    padding: 10px 10px 10px 10px;
+    width: 70%;
+    position: relative;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    color: rgb(37, 36, 35);
+    align-self: stretch;
+    font-weight: 400;
+    user-select: text;
+    cursor: text;
+    border: 2px solid #0099D4
+}
+
+.time_date {
+    color: rgb(37, 36, 35);
+    display: block;
+    font-size: 8px;
+    margin: 8px 0 0;
+    float: right;
+}
+
+
+.id_11 p,.id_22 p
+{
+    border-radius: 3px;
+    font-size: 12px;
+    margin: 0;
+    color: rgb(37, 36, 35);
+    padding: 5px 5px 5px 5px;
+    width: 60%;
+    position: relative;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    color: rgb(37, 36, 35);
+    align-self: stretch;
+    font-weight: 400;
+    user-select: text;
+    cursor: text;
+    border: 2px solid #7eb4ca;
+}
+
+
+.id_11 p
+{
+    float: right;
+    margin-right: 10px;
+    background-color: #7eb4ca;
+}
+
+
+.id_22 p
+{
+    float: left;
+
+}
+
+.received_img  {
+    border-radius: 8px;
+    font-size: 12px;
+    margin: 0;
+    color: rgb(37, 36, 35);
+    padding: 10px 10px 10px 10px;
+    width: 70%;
+    position: relative;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+    color: rgb(37, 36, 35);
+    align-self: stretch;
+    font-weight: 400;
+    user-select: text;
+    cursor: text;
+    border: 2px solid #F3F3F3;
+    box-shadow: 1px 1px #d8d5d5;
+
+}
+
+
+
+@media (min-width:961px)  { 
+    .rp
+    {
+        margin-top: 10%;
+    }
+    #tab2
+    {
+        height: 400px;
+    }
+    
+    #tab1
+    {
+        height: 400px;
+    }
+    
+    #babu
+    {
+        width: 70xp;
+        height: 30px;
+    }
+    
+     }
+    @media (min-width:1025px) { 
+        .rp
+    {
+        margin-top: 20%;
+    }
+    
+    #tab2
+    {
+        height: 450px;
+    }
+    
+    #tab1
+    {
+        height: 455px;
+    }
+    
+    #babu
+    {
+        width: 70xp;
+        height: 30px;
+    }
+    
+     }
+    
+    
+    @media (min-width:1281px) { 
+        .rp
+    {
+        margin-top: 25%;
+    }
+    
+    #tab2
+    {
+        height: 520px;
+    }
+    
+    #tab1
+    {
+        height: 520px;
+    }
+    
+    #babu
+    {
+        width: 70xp;
+        height: 30px;
+    }
+    
+     }
+    
+    
+    
+     @media screen and (max-width: 995px), 
+     screen and (max-height: 650px) {
+    
+    
+        .rp
+        {
+            margin-top: 25%;
+        }
+        
+         #tab2
+        {
+            height: 270px;
+        }
+        #tab1
+        {
+            height: 270px;
+        }
+    
+        #babu
+    {
+        width: 70xp;
+        height: 30px;
+    }
+        
+    
+     }
+
+
+     @media screen and (max-width: 995px), 
+     screen and (max-height: 750px) {
+    
+    
+        .rp
+        {
+            margin-top: 25%;
+        }
+        
+         #tab2
+        {
+            height: 370px;
+        }
+        #tab1
+        {
+            height: 370px;
+        }
+    
+        #babu
+    {
+        width: 70xp;
+        height: 30px;
+    }
+        
+    
+     }
+
+
+ 
+
+     @media screen and (max-width: 1024px), 
+     screen and (max-height: 768px) { 
+        .rp
+    {
+        margin-top: 25%;
+    }
+    
+    #tab2
+    {
+        height: 530px;
+    }
+    
+    #tab1
+    {
+        height: 530px;
+    }
+    
+    #babu
+    {
+        width: 70xp;
+        height: 30px;
+    }
+
+    .img-full
+    {
+        margin-left: 0px;
+    }
+
+    #display_name
+    {
+        margin-left: 25px !important;
+
+    }
+
+    #enable_video,#disable_video,#enable_audio,#disable_audio
+    {
+        float: left;
+    }
+    
+     }
+
+    
+    
+
+     @media
+     screen and (max-width: 1500px) and (max-height: 900px) { 
+        .rp
+    {
+        margin-top: 25%;
+    }
+    
+    #tab2
+    {
+        height: 600px;
+    }
+    
+    #tab1
+    {
+        height: 600px;
+    }
+    
+    #babu
+    {
+        width: 70xp;
+        height: 30px;
+    }
+    
+     }
+
+     @media
+     screen and (max-width: 1500px) and (max-height: 800px) { 
+        .rp
+    {
+        margin-top: 25%;
+    }
+    
+    #tab2
+    {
+        height: 370px;
+    }
+    
+    #tab1
+    {
+        height: 400px;
+    }
+    
+    #babu
+    {
+        width: 70xp;
+        height: 30px;
+    }
+    
+     }
+
+     @media
+     screen and (max-width: 1500px) and (max-height: 600px) { 
+        .rp
+    {
+        margin-top: 25%;
+    }
+    
+    #tab2
+    {
+        height: 280px;
+    }
+    
+    #tab1
+    {
+        height: 340px;
+    }
+    
+    #babu
+    {
+        width: 70xp;
+        height: 30px;
+    }
+    
+     }
+
+
+     @media screen and (max-width: 1500px) and (max-height: 500px)
+     {
+        #tab1 {
+            height: 230px;
+        }
+
+        #tab2 {
+            height: 180px;
+        }
+
+        .test_for_demo{
+            display: none;
+        }
+    
+        .col-xs-4 {
+            width: 50%;
+        }
+    
+        .col-xs-8 {
+            width: 50%;
+        }
+    
+        .col-sm-3 {
+            width: 25%;
+        }
+    
+      
+    
+        .col-xs-1 {
+            width: 0%;
+        }
+    
+        .video-overlay
+        {
+            margin-left: 20px !important;
+            font-size: 12px;
+        }
+    
+        #make_hud {
+            width: 98.5%;
+        }
+
+        .card.card-bottom {
+            margin-left: 10px;
+            width: 99%;
+        }
+    
+        .video-block-fix{
+            height: 70vh !important;
+        }
+    
+        video.videoBackground {
+            height: 70vh !important;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            height: 70vh !important;
+        }
+    
+        #mg_boss
+        {
+            height: 15vh !important;
+            margin-top: 20px;
+        }
+    
+    
+    
+        
+   
+        
+     }
+
+     @media screen and (max-width: 1500px) and (max-height: 400px)
+     {
+        #tab1 {
+            height: 150px;
+        }
+
+        #tab2 {
+            height: 110px;
+        }
+
+        .test_for_demo{
+            display: none;
+        }
+    
+        .col-xs-4 {
+            width: 50%;
+        }
+    
+        .col-xs-8 {
+            width: 50%;
+        }
+    
+        .col-sm-3 {
+            width: 25%;
+        }
+    
+      
+    
+        .col-xs-1 {
+            width: 0%;
+        }
+    
+        .video-overlay
+        {
+            margin-left: 20px !important;
+            font-size: 12px;
+        }
+    
+        #make_hud {
+            width: 98.5%;
+        }
+
+        .card.card-bottom {
+            margin-left: 10px;
+            width: 99%;
+        }
+    
+        .video-block-fix{
+            height: 70vh !important;
+        }
+    
+        video.videoBackground {
+            height: 70vh !important;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            height: 70vh !important;
+        }
+    
+        #mg_boss
+        {
+            height: 15vh !important;
+            margin-top: 20px;
+        }
+    
+    
+    
+        
+   
+        
+     }
+
+     @media screen and (max-width: 1500px) and (max-height: 350px)
+     {
+        #tab1 {
+            height: 130px;
+        }
+
+        #tab2 {
+            height: 100px;
+        }
+
+        .test_for_demo{
+            display: none;
+        }
+    
+        .col-xs-4 {
+            width: 50%;
+        }
+    
+        .col-xs-8 {
+            width: 50%;
+        }
+    
+        .col-sm-3 {
+            width: 25%;
+        }
+    
+      
+    
+        .col-xs-1 {
+            width: 0%;
+        }
+    
+        .video-overlay
+        {
+            margin-left: 20px !important;
+            font-size: 12px;
+        }
+    
+        #make_hud {
+            width: 98.5%;
+        }
+
+        .card.card-bottom {
+            margin-left: 10px;
+            width: 99%;
+        }
+    
+        .video-block-fix{
+            height: 70vh !important;
+        }
+    
+        video.videoBackground {
+            height: 70vh !important;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            height: 70vh !important;
+        }
+    
+        #mg_boss
+        {
+            height: 15vh !important;
+            margin-top: 20px;
+        }
+    
+    
+
+        
+     }
+
+
+
+
+@media only screen and (min-width: 360px) and (max-width: 767px) and (max-height: 450px)
+{
+  
+    .test_for_demo{
+        display: none;
+    }
+
+    .col-xs-4 {
+        width: 50%;
+    }
+
+    .col-xs-8 {
+        width: 50%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+    .col-xs-1 {
+        width: 0%;
+    }
+
+    .video-overlay
+    {
+        margin-left: 20px !important;
+        font-size: 12px;
+    }
+
+    #make_hud {
+        width: 98.5%;
+    }
+
+    #tab1 {
+        height: 180px;
+    }
+
+    #tab2 {
+        height: 120px;
+    }
+
+    .card.card-bottom {
+        margin-left: 10px;
+        width: 99%;
+    }
+
+    .video-block-fix{
+        height: 70vh !important;
+    }
+
+    video.videoBackground {
+        height: 70vh !important;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70vh !important;
+    }
+
+    #mg_boss
+    {
+        height: 15vh !important;
+        margin-top: 20px;
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width: 1500px) and (max-height: 400px)
+{
+  
+
+    .test_for_demo{
+        display: none;
+    }
+
+    .col-xs-4 {
+        width: 50%;
+    }
+
+    .col-xs-8 {
+        width: 50%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+  
+
+    .col-xs-1 {
+        width: 0%;
+    }
+
+    .video-overlay
+    {
+        margin-left: 20px !important;
+        font-size: 12px;
+    }
+
+    #make_hud {
+        width: 98.5%;
+    }
+
+    .card.card-bottom {
+        margin-left: 10px;
+        width: 99%;
+    }
+
+    .video-block-fix{
+        height: 70vh !important;
+    }
+
+    video.videoBackground {
+        height: 70vh !important;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70vh !important;
+    }
+
+    #mg_boss
+    {
+        height: 15vh !important;
+        margin-top: 20px;
+    }
+
+
+
+}
+
+
+@media only screen and (min-width: 360px) and (max-width: 767px) and (max-height: 400px)
+{
+    #tab1 {
+        height: 150px;
+    }
+
+    #tab2 {
+        height: 100px;
+    }
+
+    .test_for_demo{
+        display: none;
+    }
+
+    .col-xs-4 {
+        width: 50%;
+    }
+
+    .col-xs-8 {
+        width: 50%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+    .col-xs-1 {
+        width: 0%;
+    }
+
+    .video-overlay
+    {
+        margin-left: 20px !important;
+        font-size: 12px;
+    }
+
+    #make_hud {
+        width: 98.5%;
+    }
+
+    .card.card-bottom {
+        margin-left: 10px;
+        width: 99%;
+    }
+
+    .video-block-fix{
+        height: 70vh !important;
+    }
+
+    video.videoBackground {
+        height: 70vh !important;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70vh !important;
+    }
+
+    #mg_boss
+    {
+        height: 15vh !important;
+        margin-top: 20px;
+    }
+
+
+
+
+}
+
+
+
+
+   

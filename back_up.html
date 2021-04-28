@@ -1,0 +1,2457 @@
+
+<html>
+
+	<head>
+		<title>KIA Untact Video conference</title>
+		<meta name="viewport" content="width=1024">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+		<link rel="stylesheet" href="assets/fonts/kiam.css" type="text/css">
+		<link rel="stylesheet" href="assets/fonts/kial.css" type="text/css">
+		<link rel="stylesheet" href="assets/fonts/kiab.css" type="text/css">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	
+	
+		<style>
+			body {
+				background-color: #e1e1e1;
+				font-family: 'kiamedium';
+				color: #000000;
+				overflow-x: hidden;
+			}
+	
+			.scrollbar::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+				border-radius: 10px;
+				background-color: #F5F5F5;
+			}
+	
+			.scrollbar::-webkit-scrollbar {
+				width: 12px;
+				background-color: #F5F5F5;
+			}
+	
+			.scrollbar::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+				background-color: #555;
+			}
+	
+			#picture-in-picture {
+				position: relative;
+				width: 400px;
+				height: 300px;
+			}
+	
+			#overlay {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				display: none;
+				background: rgba(245, 5, 5, 0.01);
+			}
+	
+			.cv-spinner {
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+	
+			.spinner {
+				width: 40px;
+				height: 40px;
+				border: 4px #ddd solid;
+				border-top: 4px #2e93e6 solid;
+				border-radius: 50%;
+				animation: sp-anime 0.8s infinite linear;
+			}
+	
+			@keyframes sp-anime {
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+	
+			.is-hide {
+				display: none;
+			}
+	
+			video {
+				/* height:100; */
+				/* height:500px; */
+				/* max-width: 180px;
+			margin-left:20px; */
+				/* box-shadow: inset 0px 0px 36px 36px rgba(0,0,0,0.75); */
+	
+			}
+	
+			.header {
+				padding-bottom: 20px;
+				border-bottom: none !important;
+			}
+	
+			@media screen and (min-width: 768px) {
+	
+				.container .jumbotron,
+				.container-fluid .jumbotron {
+					padding-right: 0;
+					padding-left: 0;
+				}
+			}
+	
+			.container .jumbotron,
+			.container-fluid .jumbotron {
+				padding-right: 15px;
+				/* padding-left: 15px; */
+				border-radius: 6px;
+			}
+	
+	
+	
+			.jumbotron {
+				padding-top: 0px;
+				padding-bottom: 0px;
+				margin-bottom: 0px;
+				color: inherit;
+				background-color: #eee;
+			}
+	
+	
+			/* .videoBackground {
+			box-shadow: inset 0px 0px 36px 36px rgba(0,0,0,0.75);
+		}
+		#containerr {
+			width: 100vw;
+			height: 100vh;
+			text-align: center;
+			overflow: hidden;
+		} */
+			/* Space out content a bit */
+			body {
+				padding-top: 20px;
+				padding-bottom: 20px;
+				background-color: #eee;
+				margin-top: -15px;
+				overflow-x: hidden;
+			}
+	
+			/* html, */
+			/* body {
+		  width: 100%;
+		  min-height: 100%;
+		  margin: 0;
+		} */
+	
+			/* Everything but the jumbotron gets side spacing for mobile first views */
+			.header,
+			.marketing,
+			.footer {
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+	
+			/* Custom page header */
+			.header {
+				padding-bottom: 20px;
+				border-bottom: 1px solid #e5e5e5;
+			}
+	
+			/* Make the masthead heading the same height as the navigation */
+			.header h3 {
+				margin-top: 0;
+				margin-bottom: 0;
+				line-height: 40px;
+			}
+	
+			/* Custom page footer */
+			#footer {
+				padding-top: 19px;
+			}
+	
+			/* Customize container */
+			@media (min-width : 768px) {
+				.container {
+					/*max-width: 730px;
+				*/
+					width: 100%;
+				}
+			}
+	
+			.container-narrow>hr {
+				margin: 30px 0;
+			}
+	
+			/* Main marketing message and sign up button */
+			.jumbotron {
+				text-align: center;
+				border-bottom: 1px solid #e5e5e5;
+			}
+	
+			/* Responsive: Portrait tablets and up */
+			@media screen and (min-width: 768px) {
+	
+				/* Remove the padding we set earlier */
+				.header,
+				.marketing,
+				.footer {
+					padding-right: 0;
+					padding-left: 0;
+				}
+	
+				/* Space out the masthead */
+				.header {
+					margin-bottom: 30px;
+				}
+	
+				/* Remove the bottom border on the jumbotron for visual effect */
+				.jumbotron {
+					border-bottom: 0;
+				}
+			}
+	
+			.header .ci path {
+				fill: #bb162b;
+				-webkit-transition: fill .2s ease-out;
+				transition: fill .2s ease-out;
+			}
+	
+			#footer {
+				position: fixed;
+				bottom: 10;
+				width: 100%;
+				/* Footer height */
+			}
+	
+			body {
+				background: #5f4f4f;
+				font-family: 'kiamedium';
+				color: #000000;
+				font-weight: bold;
+			}
+	
+			.footer h3 {
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 27px;
+				padding: 40px 0 10px;
+				text-transform: uppercase;
+			}
+	
+			.footer ul {
+				font-size: 13px;
+				list-style-type: none;
+				margin-left: 0;
+				padding-left: 0;
+				margin-top: 15px;
+				color: #7F8C8D;
+			}
+	
+			.footer ul li a {
+				padding: 0 0 5px 0;
+				display: block;
+			}
+	
+			.footer a {
+				color: #78828D
+			}
+	
+			#myDiv {
+				/* margin:-30px 10px; */
+				padding: -20px 0px;
+				/* background: #FED;
+		  border-bottom: 5px solid red; */
+			}
+	
+			#myDiv .tyy {
+				/* margin: 5px 0px; */
+	
+				margin-left: 6px;
+				width: 96%;
+				height: 5px;
+				/* background-color: #eee; */
+			}
+	
+			.footer-bottom {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+	
+			.footer-bottom p.pull-left {
+				padding-top: 20px;
+			}
+	
+			.nav {
+				padding-left: 10;
+				margin-bottom: 0;
+				list-style: none;
+			}
+	
+			input[type=checkbox],
+			input[type=radio] {
+				margin: 4px 10 0 !important;
+				line-height: normal;
+			}
+	
+	
+			video::-webkit-media-controls-toggle-closed-captions-button {
+				display: none;
+	
+			}
+	
+			audio::-webkit-media-controls-timeline,
+			video::-webkit-media-controls-timeline {
+				display: none;
+			}
+	
+			video::-webkit-media-controls-volume-slider {
+				display: none;
+			}
+	
+			video::-webkit-media-controls-mute-button {
+				display: none;
+			}
+	
+			video::-webkit-media-controls-current-time-display {
+	
+				display: none;
+	
+	
+			}
+	
+	
+	
+			video::-webkit-media-controls-play-button {
+				display: none;
+	
+			}
+	
+			.wrapper {
+				display: flex;
+				justify-content: space-between;
+				height: 85vh;
+	
+			}
+	
+			.rightwrapper {
+				border: 1px solid #BFBFBF;
+				background-color: white;
+				border-radius: 9px;
+			}
+	
+			.main,
+			.sidebar {
+				padding: 10px;
+			}
+	
+			/* .main {
+		  width: 74%;
+		} */
+	
+			.sidebar {}
+	
+			.pull-left {
+				float: left !important;
+				margin-top: 10px;
+			}
+	
+			@media screen and (min-width: 768px) {
+				.header {
+					margin-bottom: 0px !important;
+				}
+			}
+	
+			/* .container {
+			padding-right: 0px !important;
+			padding-left: 15px;
+			margin-right: auto;
+			margin-left: auto;
+		} */
+	
+			.pull-left {
+				float: left !important;
+				margin-top: 0px !important;
+			}
+	
+			.nav {
+				margin-bottom: 0;
+				list-style: none;
+			}
+	
+	
+			body::-webkit-scrollbar {
+				width: 1em;
+			}
+	
+			body::-webkit-scrollbar-track {
+				box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			}
+	
+			body::-webkit-scrollbar-thumb {
+				background-color: darkgrey;
+				outline: 1px solid slategrey;
+			}
+	
+			img {
+				vertical-align: middle;
+				/* padding: 30px; */
+				margin-left: 10px;
+			}
+	
+			/* 
+		#display_name,#display_name1
+		{
+			float: right !important;
+			top: 10px;
+			margin-top: 15px;
+			font-family:'kiamedium';
+			font-size: 14px;
+			font-weight: bold;
+		} */
+			.tabbable-panel {
+				/* border:1px solid #eee; */
+				padding: 10px;
+			}
+	
+			/* Default mode */
+			.tabbable-line>.nav-tabs {
+				border: none;
+				margin: 0px;
+			}
+	
+			.tabbable-line>.nav-tabs>li {
+				margin-right: 2px;
+			}
+	
+			.tabbable-line>.nav-tabs>li>a {
+				border: 0;
+				margin-right: 0;
+				color: #000000;
+			}
+	
+			.tabbable-line>.nav-tabs>li>a>i {
+				color: #a6a6a6;
+			}
+	
+			.tabbable-line>.nav-tabs>li.open,
+			.tabbable-line>.nav-tabs>li:hover {
+				/* border-bottom: 4px solid #fbcdcf; */
+			}
+	
+			.tabbable-line>.nav-tabs>li.open>a,
+			.tabbable-line>.nav-tabs>li:hover>a {
+				border: 0;
+				background: none !important;
+				color: #333333;
+			}
+	
+			.tabbable-line>.nav-tabs>li.open>a>i,
+			.tabbable-line>.nav-tabs>li:hover>a>i {
+				color: #a6a6a6;
+			}
+	
+			.tabbable-line>.nav-tabs>li.open .dropdown-menu,
+			.tabbable-line>.nav-tabs>li:hover .dropdown-menu {
+				margin-top: 0px;
+			}
+	
+			.tabbable-line>.nav-tabs>li.active {
+				border-bottom: 4px solid #BB162B;
+				position: relative;
+			}
+	
+			.tabbable-line>.nav-tabs>li.active>a {
+				border: 0;
+				color: #BB162B;
+	
+				cursor: pointer;
+			}
+	
+			.tabbable-line>.nav-tabs>li.active>a>i {
+				color: #404040;
+			}
+	
+			.tabbable-line>.tab-content {
+				margin-top: -3px;
+				background-color: #fff;
+				border: 0;
+				border-top: 1px solid #c4c4c4;
+				padding-top: 15px;
+				/* padding-bottom:-80px; */
+			}
+	
+			.portlet .tabbable-line>.tab-content {
+				padding-bottom: 0;
+			}
+	
+			/* Below tabs mode */
+	
+			.tabbable-line.tabs-below>.nav-tabs>li {
+				border-top: 4px solid transparent;
+			}
+	
+			.tabbable-line.tabs-below>.nav-tabs>li>a {
+				margin-top: 0;
+			}
+	
+			.tabbable-line.tabs-below>.nav-tabs>li:hover {
+				border-bottom: 0;
+				/* border-top: 4px solid #fbcdcf; */
+			}
+	
+			.tabbable-line.tabs-below>.nav-tabs>li.active {
+				margin-bottom: -2px;
+				border-bottom: 0;
+				border-top: 4px solid #f3565d;
+			}
+	
+			.tabbable-line.tabs-below>.tab-content {
+				margin-top: -10px;
+				border-top: 0;
+				border-bottom: 1px solid #eee;
+				padding-bottom: 15px;
+			}
+	
+			.fake-input {
+				position: relative;
+			}
+	
+			.fake-input input {
+				border: 1px solid #e1e1e1;
+				background-color: #fff;
+				display: block;
+				width: 90%;
+				box-sizing: border-box
+			}
+	
+			.fake-input img {
+				position: absolute;
+				top: 05px;
+				right: 15px;
+				height: 22px;
+				width: 22px;
+				cursor: pointer;
+			}
+	
+			/* 
+		#display_name,#display_name1
+		{
+			float: right !important;
+			top: 10px;
+			margin-top: 15px;
+			font-family:'kiamedium';
+			font-size: 14px;
+			font-weight: bold;
+		} */
+			.disabled {
+				pointer-events: none;
+				cursor: pointer;
+			}
+	
+			.fake-input {
+				position: relative;
+			}
+	
+			.fake-input input {
+				border: 1px solid #e1e1e1;
+				background-color: #fff;
+				display: block;
+				width: 90%;
+				box-sizing: border-box
+			}
+	
+			.fake-input img {
+				position: absolute;
+				top: 05px;
+				right: 15px;
+				height: 22px;
+				width: 22px;
+				cursor: pointer;
+			}
+	
+			.nav>li>a {
+				position: relative;
+				display: block;
+				padding: 5px 20px;
+			}
+	
+			.sent_msg p {
+				background: rgb(219, 244, 253);
+				border-radius: 3px;
+				font-size: 14px;
+				margin: 0;
+				color: rgb(37, 36, 35);
+				padding: 5px 10px 5px 12px;
+				width: 70%;
+				position: relative;
+				overflow-wrap: break-word;
+				font-size: 14px;
+				line-height: 22px;
+				letter-spacing: -0.2px;
+				color: rgb(37, 36, 35);
+				align-self: stretch;
+				font-weight: 400;
+				user-select: text;
+				cursor: text;
+			}
+	
+			.time_date {
+				color: rgb(37, 36, 35);
+				display: block;
+				font-size: 8px;
+				margin: 8px 0 0;
+				float: right;
+			}
+	
+	
+	
+			.received_withd_msg p {
+				background: rgb(219, 244, 253);
+				border-radius: 3px;
+				font-size: 14px;
+				margin: 0;
+				color: rgb(37, 36, 35);
+				padding: 5px 10px 5px 12px;
+				width: 70%;
+				position: relative;
+				overflow-wrap: break-word;
+				font-size: 14px;
+				line-height: 22px;
+				letter-spacing: -0.2px;
+				color: rgb(37, 36, 35);
+				align-self: stretch;
+				font-weight: 400;
+				user-select: text;
+				cursor: text;
+			}
+	
+			.nav-pills>li+li {
+				margin-left: 0px;
+			}
+	
+			.nav {
+				padding-left: 0 !important;
+				margin-bottom: 0;
+				list-style: none;
+			}
+	
+			.testing {
+				border: 2px solid skyblue !important;
+			}
+	
+	
+			ul.animation_s {
+				position: absolute;
+				top: 50%;
+				left: 0%;
+				display: flex;
+			}
+	
+			ul.animation_s li {
+				list-style: none;
+				width: 6px;
+				height: 10px;
+				background: #262626;
+				margin: 0 4px;
+				animation: animate .7s infinite alternate
+			}
+	
+			@keyframes animate {
+				0% {
+					transform: scaleY(1);
+				}
+	
+				25% {
+					transform: scaleY(1);
+				}
+	
+				50% {
+					transform: scaleY(1);
+				}
+	
+				75% {
+					transform: scaleY(1);
+				}
+	
+				100% {
+					transform: scaleY(3);
+				}
+	
+			}
+	
+			ul.animation_s li:nth-child(1) {
+				animation-delay: .1s;
+			}
+	
+			ul.animation_s li:nth-child(2) {
+				animation-delay: .2s;
+			}
+	
+			ul.animation_s li:nth-child(3) {
+				animation-delay: .3s;
+			}
+	
+			ul.animation_s li:nth-child(4) {
+				animation-delay: .4s;
+			}
+	
+			ul.animation_s li:nth-child(5) {
+				animation-delay: .5s;
+			}
+	
+			ul.animation_s li:nth-child(6) {
+				animation-delay: .6s;
+			}
+		</style>
+		<link rel="stylesheet" href="appstyle.css" type="text/css">
+		<script src="https://use.fontawesome.com/1bc9c8ebdb.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	
+	</head>
+	
+	
+	<body style="background-color: #e1e1e1 !important;">
+	
+	
+			
+	
+		<div class="container-fluid" >
+	
+	
+			<div id="overlay">
+				<div class="cv-spinner">
+					<span class="spinner"></span>
+				</div>
+			</div>
+	
+			<div class="row video-block-fix">
+				<div class="col-xs-8 col-sm-8 col-md-8">
+					<span class="main" id="main">
+						<img src="images/Group 59.png" id="rp" class="rp img-responsive center-block"
+							style="width: 20%;width:160px">
+					</span>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4">
+					<div class="wrapper">
+	
+	
+						<div id="players" style="width:100%;margin-left:-4px !important;background-color: #ffffff;">
+							<div class="tabbable-panel">
+								<div class="tabbable-line">
+									<ul class="nav nav-tabs">
+										<li class="active" id="chat1" style="font-size: 12px;">
+											<a data-toggle="tab" href="#tab1">
+												<span class="tab_icon" id="imgg_1"><img src="images/Group 136.png"
+														style="    padding-bottom: 6px;padding-right:8px"></span>
+												<span class="tab_icon" id="imgg_2" style="display: none;"><img
+														src="images/Group 137.png"
+														style="    padding-bottom: 6px;padding-right:8px"></span>
+	
+												<span class="tab_text" id="tab_text1">People</span>
+	
+											</a></li>
+										<li id="chat" style="font-size: 12px;"><a data-toggle="tab" href="#tab2">
+	
+												<span class="tab_icon" id="imgg_3"><img src="images/Group 138.png"
+														style="   padding-bottom: 6px;padding-right:5px"></span>
+												<span class="tab_icon" id="imgg_4" style="display: none;"><img
+														src="images/Group 139.png"
+														style="   padding-bottom: 6px;padding-right:5px"></span>
+	
+												<span class="tab_text">Chat</span>
+	
+	
+											</a></li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab1" class="tab-pane fade in active scrollbar"
+											style="overflow-x: hidden;overflow-y: auto;">
+											<div class="sidebar tyy">
+												<div class="card user_row">
+													<div class="container" style=" overflow: auto;
+												white-space:nowrap;">
+	
+														<div class="row ">
+															<div class="col-xs-3 col-sm-3 col-md-3">
+	
+																<img src="" id="john">
+																<video id="localVideo" autoplay muted playsinline
+																	style="margin-left:-22px;margin-top:8px;width:119px;border: 1px solid lightgray;height: 90px;"></video>
+															</div>
+															<div class="col-xs-1 col-sm-1 col-md-1">
+	
+															</div>
+															<div class="col-xs-3 col-sm-3 col-md-3"
+																style="margin-top:10px;font-family:kiamedium;">
+																<div class="video-overlay" id="display_name"
+																	style="font-family:kiamedium !important;color:#000000;margin-left: 10px;">
+																</div>
+															</div>
+	
+	
+															<div class="col-xs-3 col-sm-3 col-md-3">
+																<ul
+																	style="padding-top:60px;list-style-type: none !important;display:inline-flex;margin-left:0px;margin-top:14px">
+																	<li id="enable_video"><img src="assets/Group 69.png"
+																			style="height:17px;margin-top:5px" alt=""></li>
+																	<li id="disable_video" style="display: none;"><img
+																			src="assets/Group 68.png"
+																			style="height:17px;margin-top:5px" alt=""></li>
+	
+																	<li id="enable_audio"><img src="assets/Group 73.png"
+																			style="height:17px;margin-top:4px" alt=""></li>
+																	<li id="disable_audio" style="display: none;"><img
+																			src="assets/Icon feather-mic-offf.png"
+																			style="height:17px;margin-top:4px" alt=""></li>
+																</ul>
+															</div>
+														</div>
+	
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="tab2" class="tab-pane fade scrollbar"
+											style="overflow-x: hidden;overflow-y: auto;">
+											<!-- <progress id="sendProgress" max="0" value="0"></progress> -->
+											
+	
+											<div id="all_messages" class="msg_history container"></div>
+	
+											<br>
+											<form class="form form-horizontal" onSubmit="return false;">
+												<img id="loader1" src="images/loading (1).gif" width="36" height="36" style="display: none;" >
+	
+												<div class="form-group">
+													<div class="col-xs-11 col-sm-11 col-md-11"
+														style="bottom:20;position: absolute;">
+	
+														<div class="fake-input">
+															<input type="text" class="form-control" id="dataTextbox"
+																placeholder="Type Your message Here"
+																style="border-radius: 13px;border:1px solid #707070">
+															<img src="images/attch.png" style="width: 30px;right: 50px;"
+																onclick="document.getElementById('file-input').click();">
+															<button id="send" type="submit"
+																style="cursor: pointer;background: 0;border: 0;margin-left: 100px;">
+																<img src="images/iconfinder_circle-content-send_1495053.svg"
+																	style="right: -10;height: 35px;width: 35px;margin-top: -5px;">
+	
+															</button>
+	
+														</div>
+														<input id="file-input" type="file" name="name" multiple="true"
+															style="display: none" />
+													</div>
+	
+												</div>
+	
+	
+	
+	
+										</div>
+										</form>
+	
+	
+	
+									</div>
+	
+	
+								</div>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+			<div class="row mgg" id="mg_boss">
+	
+				<div class="col-sm-8" id="make_hud">
+	
+					<div class="card card-bottom" style="margin-left: 10px;width: 100%;">
+	
+						<div class="container-fluid">
+							<div class="col-xs-1 col-sm-1 col-md-1">
+								<img src="images/Group-1.png" id="screen_share_checkbox"
+									style="cursor:pointer;margin-left: -15px;margin-top: 4px;height:31px;width:31px" alt=""
+									alt="" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+									data-content="" data-html="true" style="height:34px;width:34px">
+								<a id="browser_screen_share_doesnt_support"
+									href="https://caniuse.com/#search=getDisplayMedia"></a>
+	
+	
+								<script>
+									$(document).ready(function () {
+	
+										$('[data-bs-toggle="popover"]').popover({
+											container: 'body',
+											html: true,
+											sanitize: false,
+											content: function () {
+												return $('#popover-content').html();
+	
+	
+	
+											}
+	
+										});
+	
+	
+	
+	
+									});
+								</script>
+	
+							</div>
+							<div class="col-xs-3 col-sm-3 col-md-3">
+	
+							</div>
+							<div class="col-xs-5 col-sm-5 col-md-5">
+								<div class="center-block" style="">
+									<ul class="nav nav-pills payments" style="padding-left:43px">
+										<li style="cursor: pointer;" id="turn_off_camera_button"><img
+												src="assets/Group 56.png" style="width: 40px;height: 40px;">
+										</li>
+										<li style="cursor: pointer;display: none;" id="turn_on_camera_button"><img
+												src="assets/Group 60.png" style="width: 40px;height: 40px;">
+										</li>
+										<li style="cursor: pointer;" id="end_vc"><img src="assets/Group 44.png"
+												style="margin-left:18px;width: 40px;height: 40px;"
+												onclick="window.location.href='index.html'">
+	
+										</li>
+										<li style="cursor: pointer;" id="mute_mic_button"><img src="assets/Group 57.png"
+												style="margin-left:18px;width: 40px;height: 40px;">
+										</li>
+										<li style="cursor: pointer;display: none;" id="unmute_mic_button"><img
+												src="assets/Group 59.png"
+												style="margin-left:18px;width: 40px;height: 40px;">
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xs-1 col-sm-1 col-md-1">
+	
+							</div>
+							<div class="col-xs-1 col-sm-1 col-md-1">
+								<img src="images/Kia Logo new 139.png" alt="" class="img-full"
+									style="width: 100px;height: 40px;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4 test_for_demo" id="test_for_demo">
+	
+					<div class="card card-bottom right-footer text-center">
+						<p style="font-size: 10px;">For Assistance Call: 1800-108-5000 Email:Kiacare@kiamotorsindia.in<br />
+							&copy; 2021 Kia Motors India, Inc.</p>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+		</div>
+	
+		<br>
+	
+	
+	
+	
+	</body>
+	
+	<script>
+		function toggleNav() {
+			var element = document.getElementById("mySidenav")
+			var shown = element.getAttribute("data-isshown");
+			if (shown == "true") {
+				element.setAttribute("data-isshown", "false");
+				element.style.width = "0";
+	
+			} else {
+				element.setAttribute("data-isshown", "true");
+				element.style.width = "250px";
+			}
+		}
+	</script>
+	
+	<script type="text/javascript">
+		$('document').ready(function () {
+	
+			$('video').click(function (event) {
+				console.log(event)
+	
+			});
+	
+			$(window).on('load', function () {
+				$('#dummyModal').modal('show');
+			});
+	
+	
+			var tab2 = document.getElementById('chat');
+			var tab1 = document.getElementById('chat1');
+	
+	
+	
+	
+			tab2.addEventListener("click", function () {
+				document.getElementById("imgg_1").style.display = "none";
+				document.getElementById("imgg_2").style.display = "inline-block";
+				document.getElementById("imgg_3").style.display = "none";
+				document.getElementById("imgg_4").style.display = "inline-block";
+			}, false);
+	
+			tab1.addEventListener("click", function () {
+				document.getElementById("imgg_4").style.display = "none";
+				document.getElementById("imgg_3").style.display = "inline-block";
+				document.getElementById("imgg_2").style.display = "none";
+				document.getElementById("imgg_1").style.display = "inline-block";
+			}, false);
+	
+	
+		});
+	</script>
+	
+	</script>
+	
+	<script type="module">
+		import {WebRTCAdaptor} from "./js/webrtc_adaptor.js"
+			import {getUrlParameter} from "./js/fetch.stream.js" 
+		
+		   
+			var token = getUrlParameter("token");
+			var streamId = getUrlParameter("streamId");
+			var playOnly = getUrlParameter("playOnly");
+			if(playOnly == null) {
+				playOnly = false;
+			}
+		
+			// var volume_change_input = document.getElementById("volume_change_input");
+			// volume_change_input.addEventListener("change", changeVolume);
+		
+			function changeVolume(){
+			
+				   if(document.getElementById('volume_change_input') != null){
+					   webRTCAdaptor.currentVolume = this.value;
+					if(webRTCAdaptor.soundOriginGainNode != null){
+						webRTCAdaptor.soundOriginGainNode.gain.value = this.value; 
+					}
+		
+					   if(webRTCAdaptor.secondStreamGainNode != null){
+						   webRTCAdaptor.secondStreamGainNode.gain.value = this.value; 
+					   }
+				   }
+			}
+		
+			var turn_off_camera_button = document.getElementById("turn_off_camera_button");
+			turn_off_camera_button.addEventListener("click", turnOffLocalCamera,false)
+			var turn_on_camera_button = document.getElementById("turn_on_camera_button");
+			turn_on_camera_button.addEventListener("click", turnOnLocalCamera,false)
+			var mute_mic_button = document.getElementById("mute_mic_button");
+			mute_mic_button.addEventListener("click", muteLocalMic,false)
+			var unmute_mic_button = document.getElementById("unmute_mic_button");
+			unmute_mic_button.addEventListener("click", unmuteLocalMic,false)
+			var send = document.getElementById("send");
+			send.addEventListener("click", sendText, false);
+		
+			var send1 = document.getElementById("file-input");
+	
+	
+			send1.addEventListener("change", send_image, false);
+	
+			var file_input = document.getElementById("file-input");
+		
+			var messageNumber = 0;
+			var idBody = "browser";
+		
+		
+			function createId() {
+			  return idBody + messageNumber;
+			}
+		
+			function send_image() {
+	
+			$('#loader1').show();
+	
+			var imageURL = file_input.files[0];
+	
+			console.log(imageURL.size)
+	
+			if (imageURL.size === 0) 
+			{
+				   alert("File is empty, please select a non-empty file")
+					return;
+			}
+	
+	
+	var formData = new FormData();
+	formData.append('file', $('input[type=file]')[0].files[0]);
+	formData.append('vc_room', localStorage.getItem("room"));
+	formData.append('who', publishStreamId);
+	formData.append('user_type', "customer");
+	
+	   $.ajax({
+	
+		
+	
+		   url:"https://videoserver.apprikart.com/kia_vc_api/v1/upload_vc_file/",
+		   type: 'POST',
+		   data: formData,
+		   contentType: false,
+		   enctype: 'multipart/form-data',
+		   processData: false,
+		   success: function (response) {
+		 
+		var dateObj = new Date();
+		
+		var dateTime = dateObj.getTime();
+		
+		var obj = new Object();
+		obj.messageId = createId(),
+		obj.streamId = publishStreamId,
+		obj.fileName = imageURL.name;
+		obj.display_names = localStorage.getItem("display_name");
+		obj.eventType = "FILE_MESSAGE";
+		obj.serverFilePath = "https://videoserver.apprikart.com"+response.file;
+	
+		createImageMessage(imageURL.name, true, dateObj.toLocaleTimeString() ,imageURL.name,localStorage.getItem("display_name"));
+		sendData(JSON.stringify(obj));
+		   },
+		   error: function(data){
+			alert('Oops something went.');
+			}
+		}).done(function()  {
+	
+			$('#loader1').hide();
+	
+	
+			  });
+	
+	
+	
+	
+		
+	}
+		
+			function createImageMessage(imageURL, sentByUs, date,imageURL1,dis) {
+	
+				if (sentByUs) {
+				$(
+				  '<div class="outgoing_msg row"><div class="col" style="margin-top:10px;margin-bottom:10px"><div class="rounded float-right sent_img"><span style="font-size:10px;font-weight: 600;">'+dis+'</span><br><img src="assets/f.png" style="height:17px;width:17px;margin-left:-2px;margin-top:-8px;margin-right:7px"><a style="padding-top:5px">'+imageURL1+'</a><span class="time_date">' +
+					date +
+					"</span></div></div></div>"
+				).appendTo($("#all_messages"));
+			  } else {
+				$(
+				  '<div class="incoming_msg row"><div class="col" style="margin-top:10px;margin-bottom:10px"><div class="rounded float-left received_img"><span style="font-size:10px ! important;font-weight: 600 ! important ;">'+dis+'</span><br><img src="assets/f.png" style="height:17px;width:17px;margin-left:-2px;margin-top:-8px;margin-right:7px"><a style="padding-top:5px" target="_blank" href ='+imageURL+' download> '+
+					imageURL1 +
+		
+					
+				'</a><span class="time_date">' +
+					date +
+					"</span></div></div></div>"
+				).appendTo($("#all_messages"));
+			  }
+			}
+		
+			$('body').on('click', '#screen_share_checkbox', function(){
+				
+						  switchVideoMode("screen")
+					
+				});
+		
+			if (document.querySelector('input[name="videoSource"]')) {
+				  document.querySelectorAll('input[name="videoSource"]').forEach((elem) => {
+					elem.addEventListener("change", function(event) {
+						  var item = event.target;
+						  switchVideoMode(item)
+						});
+				  });
+			}
+		
+			var saveToDisk = function(fileUrl, fileName) {
+			var save = document.createElement('a');
+			save.href = fileUrl;
+			save.target = '_blank';
+			save.download = fileName || fileUrl;
+			var event = document.createEvent('Event');
+			event.initEvent('click', true, true);
+	
+			save.dispatchEvent(event);
+			(window.URL || window.webkitURL).revokeObjectURL(save.href);
+		   }
+	
+			var roomNameBox = localStorage.getItem("room");
+			var display_name = localStorage.getItem("display_name");
+		
+			document.getElementById("display_name").innerHTML = display_name;
+							if(display_name.length >=1 && display_name.length <=5)
+								{
+				
+								  document.getElementById('display_name').style.marginRight = "170px";
+								  
+								}
+								else if(display_name.length >=6 && display_name.length <=8)
+								{
+									document.getElementById('display_name').style.marginRight = "160px";
+		
+								}
+								else if(display_name.length >8 && display_name.length <=18)
+								{
+		
+				
+				document.getElementById('display_name').style.marginRight = "100px";
+								}
+		
+			var roomOfStream = new Array();
+			var streamsList = new Array();
+		
+			var publishStreamId;
+			var isDataChannelOpen = false;
+			var isMicMuted = false;
+			var isCameraOff = false;
+			var roomTimerId = -1;
+		
+			var autoRepublishEnabled = true;
+		   
+			var autoRepublishIntervalJob = null;
+		
+			function switchVideoMode(chbx){
+				if(chbx == "screen") {
+					  webRTCAdaptor.switchDesktopCapture(publishStreamId);
+				  }
+				  
+				else {
+					  webRTCAdaptor.switchVideoCameraCapture(publishStreamId, chbx);
+				  }
+			}
+		
+			
+			function turnOffLocalCamera() {
+				webRTCAdaptor.turnOffLocalCamera();
+				isCameraOff = true;
+				handleCameraButtons();
+				sendNotificationEvent("CAM_TURNED_OFF");
+				document.getElementById("localVideo").style.visibility = "hidden";
+				document.getElementById("john").src = "images/Group 591.png";
+				document.getElementById("john").style.float = "left";
+				document.getElementById("john").style.marginLeft = "-8px";
+				document.getElementById("john").style.marginTop= "8px";
+				document.getElementById("john").style.border= "1px solid lightgray";
+				document.getElementById("john").style.padding= "15px";
+				document.getElementById("john").style.height= "90px";
+				document.getElementById("john").style.width= "117px";
+		
+			
+		
+			
+		
+		
+				document.getElementById("display_name").style.marginRight= "90px";
+				document.getElementById("localVideo").style.marginLeft = "-22px";
+		
+	
+				try {
+				document.getElementById("john").style.display = "block";
+				document.getElementById("enable_video").style.display = "none";
+				document.getElementById("disable_video").style.display = "revert";
+	
+	
+		
+				document.getElementById("remoteVideo2"+publishStreamId).style.display = "none";
+				document.getElementById("remoteVideo1_2"+publishStreamId).src= "images/Group 59.png";
+				document.getElementById("remoteVideo1_2"+publishStreamId).style.display= "block";
+					  }
+				  catch(err) {
+					console.log(err)
+				}
+	
+	
+				
+		
+		
+			}
+			function turnOnLocalCamera() {
+				document.getElementById("localVideo").style.visibility = "visible";
+				document.getElementById("localVideo").style.marginLeft = "-8px";
+		
+				document.getElementById("john").style.display = "none";
+		
+			
+			
+		
+		
+				webRTCAdaptor.turnOnLocalCamera();
+				isCameraOff = false;
+				handleCameraButtons();
+				sendNotificationEvent("CAM_TURNED_ON");
+	
+	
+				try {
+					document.getElementById("enable_video").style.display = "revert";
+				document.getElementById("disable_video").style.display = "none";
+				document.getElementById("remoteVideo2"+publishStreamId).style.display = "inline-block";
+				document.getElementById("remoteVideo1_2"+publishStreamId).src= "images/Group 59.png";
+				document.getElementById("remoteVideo1_2"+publishStreamId).style.display= "none";
+	
+	
+					  }
+				  catch(err) {
+					console.log(err)
+				}
+				
+				
+				
+		
+				
+			}
+		
+			function muteLocalMic(){
+				document.getElementById("enable_audio").style.display = "none";
+				document.getElementById("disable_audio").style.display = "revert";
+		
+				webRTCAdaptor.muteLocalMic();
+	
+				isMicMuted = true;
+				handleMicButtons();
+				sendNotificationEvent("MIC_MUTED");
+			}
+		
+			function unmuteLocalMic() {
+				document.getElementById("enable_audio").style.display = "revert";
+				document.getElementById("disable_audio").style.display = "none";
+		
+				webRTCAdaptor.unmuteLocalMic();
+				isMicMuted = false;
+				handleMicButtons();
+				sendNotificationEvent("MIC_UNMUTED");
+			}
+		
+			function sendNotificationEvent(eventType) {
+				if(isDataChannelOpen) {
+					var notEvent = { streamId: publishStreamId, eventType:eventType };
+	
+					console.log(notEvent)
+		
+					webRTCAdaptor.sendData(publishStreamId, JSON.stringify(notEvent));
+				}	else {
+					console.log("Could not send the notification because data channel is not open.");
+				}
+			}
+		
+			function handleCameraButtons() 
+			{
+				if(isCameraOff) {
+					document.getElementById("turn_off_camera_button").style.display = "none";
+					document.getElementById("turn_on_camera_button").style.display = "inline-block";
+				} else {
+					document.getElementById("turn_off_camera_button").style.display = "inline-block";
+					document.getElementById("turn_on_camera_button").style.display = "none";
+				}
+			}
+		
+			function handleMicButtons() {
+				if(isMicMuted) {
+					document.getElementById("mute_mic_button").style.display = "none";
+					document.getElementById("unmute_mic_button").style.display = "inline-block";
+					
+				} else {
+					document.getElementById("mute_mic_button").style.display = "inline-block";
+					document.getElementById("unmute_mic_button").style.display = "none";
+				}
+			}
+		
+			function handleNotificationEvent(obj) {
+				console.log("Received data : ", obj.event.data);
+				var notificationEvent = JSON.parse(obj.event.data);
+				if(notificationEvent != null && typeof(notificationEvent) == "object") {
+				  var eventStreamId = notificationEvent.streamId;
+	
+				  var eventTyp = notificationEvent.eventType;
+	
+				  var eventTyp = notificationEvent.eventType;
+				  if(eventTyp == "CAM_TURNED_OFF") {
+				  try {
+					document.getElementById("remoteVideo"+eventStreamId).style.display = "none";
+	
+				document.getElementById("mute"+eventStreamId).src = "images/Group 591.png";
+				  document.getElementById("mute"+eventStreamId).style.float = "left";
+				document.getElementById("mute"+eventStreamId).style.marginLeft = "-6px";
+				document.getElementById("mute"+eventStreamId).style.marginTop= "8px";
+				document.getElementById("mute"+eventStreamId).style.height= "90px";
+				document.getElementById("mute"+eventStreamId).style.width= "117px";
+				document.getElementById("mute"+eventStreamId).style.border= "1px solid  lightgray";
+				document.getElementById("mute"+eventStreamId).style.padding= "15px";
+		
+				document.getElementById("enable_video1"+eventStreamId).style.display = "none";
+				document.getElementById("disable_video1"+eventStreamId).style.display = "revert";
+		
+				document.getElementById("remoteVideoss"+eventStreamId).style.marginRight= "80px";
+				document.getElementById("remoteVideoss"+eventStreamId).style.marginTop= "10px";
+		
+				document.getElementById("mute"+eventStreamId).style.display = "block";
+				document.getElementById("remoteVideo1"+eventStreamId).style.display = "none";
+					document.getElementById("remoteVideo1_1"+eventStreamId).style.display = "block";
+					document.getElementById("remoteVideo1_1"+eventStreamId).src = "images/Group 59.png";
+					document.getElementById("remoteVideo1_1"+eventStreamId).style.width = "160px";
+	
+					  }
+				  catch(err) {
+					console.log(err)
+				}
+				
+					
+		
+		
+		  
+		
+		
+					}
+	
+					else if(eventTyp == "REMOTE_USER_MIC_MUTE_BY_HOST")
+					{
+						var REMOTE_STREAM_ID = notificationEvent.REMOTE_STREAM_ID;
+	
+						if(REMOTE_STREAM_ID == publishStreamId)
+						{
+							muteLocalMic();
+						}
+					}
+	
+	
+					 else if (eventTyp == "CAM_TURNED_ON"){
+							
+	
+	
+	
+					try {
+						console.log("Camera turned on for : ", eventStreamId);
+	
+						document.getElementById("remoteVideo"+eventStreamId).style.display = "inline-block";
+							document.getElementById("enable_video1"+eventStreamId).style.display = "revert";
+				document.getElementById("disable_video1"+eventStreamId).style.display = "none";
+				document.getElementById("mute"+eventStreamId).style.display = "none";
+		
+				document.getElementById("remoteVideo"+eventStreamId).style.marginLeft = "-8px";
+				document.getElementById("remoteVideo1"+eventStreamId).style.display = "inline-block";
+					document.getElementById("remoteVideo1_1"+eventStreamId).style.display = "none";
+	
+					  }
+				  catch(err) {
+					console.log(err)
+				}
+				
+	
+	
+							
+					} else if (eventTyp == "MIC_MUTED"){
+	
+	
+				try {
+				console.log("Microphone muted for : ", eventStreamId);
+				document.getElementById("enable_audio1"+eventStreamId).style.display = "none";
+				document.getElementById("disable_audio1"+eventStreamId).style.display = "revert";
+				localStorage.setItem("mic_off","mic_off")
+	
+					  }
+				  catch(err) {
+					console.log(err)
+				}
+				
+		
+					} else if (eventTyp == "MIC_UNMUTED"){
+	
+	
+						try {
+							console.log("Microphone unmuted for : ", eventStreamId);
+				document.getElementById("enable_audio1"+eventStreamId).style.display = "revert";
+				document.getElementById("disable_audio1"+eventStreamId).style.display = "none";
+				localStorage.setItem("mic_off","mic_on");
+	
+					  }
+				  catch(err) {
+					console.log(err)
+				}
+				
+				
+	
+		
+					}
+					else if (eventTyp == "SCREEN_SHARE_TURNED_ON"){
+						//switchVideoMode("screen")
+	
+						try {
+						console.log("Camera turned on for : ", eventStreamId);
+	
+						document.getElementById("remoteVideo"+eventStreamId).style.display = "inline-block";
+							document.getElementById("enable_video1"+eventStreamId).style.display = "revert";
+				document.getElementById("disable_video1"+eventStreamId).style.display = "none";
+				document.getElementById("mute"+eventStreamId).style.display = "none";
+		
+				document.getElementById("remoteVideo"+eventStreamId).style.marginLeft = "-8px";
+				document.getElementById("remoteVideo1"+eventStreamId).style.display = "inline-block";
+					document.getElementById("remoteVideo1_1"+eventStreamId).style.display = "none";
+	
+					  }
+				  catch(err) {
+					console.log(err)
+				}
+	
+					}
+					else if (eventTyp == "SCREEN_SHARE_TURNED_OFF "){
+	
+					try {
+	
+				document.getElementById("remoteVideo"+eventStreamId).style.display = "none";
+	
+				document.getElementById("mute"+eventStreamId).src = "images/Group 591.png";
+				  document.getElementById("mute"+eventStreamId).style.float = "left";
+				document.getElementById("mute"+eventStreamId).style.marginLeft = "-6px";
+				document.getElementById("mute"+eventStreamId).style.marginTop= "8px";
+				document.getElementById("mute"+eventStreamId).style.height= "90px";
+				document.getElementById("mute"+eventStreamId).style.width= "117px";
+				document.getElementById("mute"+eventStreamId).style.border= "1px solid  lightgray";
+				document.getElementById("mute"+eventStreamId).style.padding= "15px";
+		
+				document.getElementById("enable_video1"+eventStreamId).style.display = "none";
+				document.getElementById("disable_video1"+eventStreamId).style.display = "revert";
+		
+				document.getElementById("remoteVideoss"+eventStreamId).style.marginRight= "80px";
+				document.getElementById("remoteVideoss"+eventStreamId).style.marginTop= "10px";
+		
+				document.getElementById("mute"+eventStreamId).style.display = "block";
+				document.getElementById("remoteVideo1"+eventStreamId).style.display = "none";
+					document.getElementById("remoteVideo1_1"+eventStreamId).style.display = "block";
+					document.getElementById("remoteVideo1_1"+eventStreamId).src = "images/Group 59.png";
+					document.getElementById("remoteVideo1_1"+eventStreamId).style.width = "160px";
+	
+					  }
+				  catch(err) {
+					console.log(err)
+				}
+	
+					}
+			  }
+			}
+		
+			function checkAndRepublishIfRequired() {
+			 var iceState = webRTCAdaptor.iceConnectionState(publishStreamId);
+			console.log("Ice state checked = " + iceState);
+	
+			  if (iceState == null || iceState == "failed" || iceState == "disconnected"){
+				// removeRemoteVideo(streamId)
+				  webRTCAdaptor.stop(streamId);
+				  webRTCAdaptor.closePeerConnection(streamId);
+				  webRTCAdaptor.closeWebSocket();
+				  initWebRTCAdaptor(true, autoRepublishEnabled);
+			  }	
+		}
+			
+			function joinRoom() {
+		
+				$("#overlay").fadeIn(300);
+		
+				webRTCAdaptor.joinRoom(roomNameBox, streamId);
+			}
+		
+			function leaveRoom() {
+				webRTCAdaptor.leaveFromRoom(roomNameBox);
+		
+				for (var node in document.getElementById("players").childNodes) {
+					if(node.tagName == 'DIV' && node.id != "localVideo") {
+						document.getElementById("players").removeChild(node);
+					}
+				}
+			}
+		
+		function sendText() {
+		
+		var dateObj = new Date();
+		
+		var dateTime = dateObj.getTime();
+		
+		var obj = new Object();
+		obj.messageId = createId(),
+		obj.streamId = publishStreamId,
+		obj.display_names = localStorage.getItem("display_name");
+		obj.eventType = "TEXT_MESSAGE";
+		obj.TEXT_MESSAGE_VALUE = $("#dataTextbox").val();
+		obj.messageDate = dateTime;
+		
+		
+		
+		var string = JSON.stringify(obj);
+		var text = $("#dataTextbox").val();
+		var dis = localStorage.getItem("display_name");;
+		
+			
+		sendData(JSON.stringify(obj));
+	
+		var objDiv = document.getElementById("tab2");
+		objDiv.scrollTop = objDiv.scrollHeight;
+		
+		createNewMessage(text, dateObj.toLocaleTimeString(), dis, true);
+		$("#dataTextbox").val("");
+					
+		}
+		
+		function createNewMessage(message, date, dis, sentByUs) {
+			  if ($.trim(message) == "") {
+				return false;
+			  }
+			  if (sentByUs) {
+				$(
+		
+		
+				  '<div class="outgoing_msg row id_11"><p style="font-weight:100;border-radius:8px;margin-top:10px;margin-bottom:10px"><span style="font-size:10px;font-weight: 600;">'+ dis +'</span></br>' +
+					message +
+					'<span class="time_date">' +
+					date +
+					"</span></p></div>"
+				).appendTo($("#all_messages"));
+			  } else {
+				$(
+				  '<div class="outgoing_msg row id_22"><p style="font-weight:100;border-radius:8px;margin-top:10px;margin-bottom:10px;border:2px solid #F3F3F3; box-shadow: 1px 1px #d8d5d5;"><span style="font-size:10px;font-weight: 600;">'+dis +'</span></br>' +
+					message +
+					'<span class="time_date">' +
+					date +
+					"</span></p></div>"
+				).appendTo($("#all_messages"));
+			  }
+			}
+	
+			let receiveBuffer = [];
+			let receivedSize = 0;
+	
+		
+			function handleImageData(data) {
+				console.log(data)
+				var jsons_parsing = JSON.parse(data)
+			 
+				var dateObj = new Date();
+		
+		
+				createImageMessage(jsons_parsing.serverFilePath, false, dateObj.toLocaleTimeString(),jsons_parsing.fileName,jsons_parsing.display_names);
+				
+			}
+	
+	
+		
+			function sendData(data) {
+			  try {
+				var iceState = webRTCAdaptor.iceConnectionState(publishStreamId);
+				if (
+				  iceState != null &&
+				  iceState != "failed" &&
+				  iceState != "disconnected"
+				) {
+				  webRTCAdaptor.sendData(publishStreamId, data);
+				} else {
+				  alert("WebRTC connection is not active.");
+				}
+			  } catch (exception) {
+				console.error(exception);
+			   
+			  }
+			}
+		
+			function handleTextMessage(data) {
+			  var messageObj = JSON.parse(data);
+			  console.log(messageObj)
+			  var dateObj = new Date();
+			  createNewMessage(
+				messageObj.TEXT_MESSAGE_VALUE,
+				dateObj.toLocaleTimeString(),
+				messageObj.display_names,
+				false
+			  );
+			}
+		
+		
+			function publish(streamName, token) {
+				publishStreamId = streamName;
+				webRTCAdaptor.publish(streamName, token);
+			}
+		
+			function streamInformation(obj) {
+				webRTCAdaptor.play(obj.streamId, token,	roomNameBox);
+			}
+		
+			function playVideo(obj) {
+				//alert(obj.length)
+				var room = roomOfStream[obj.streamId];
+				console.log("new stream available with id: "
+						+ obj.streamId + "on the room:" + room);
+		
+				var video = document.getElementById("remoteVideo"+obj.streamId);
+		
+				if (video == null) {
+					createRemoteVideo(obj.streamId);
+					info(obj.streamId);
+					video = document.getElementById("remoteVideo"+obj.streamId);
+					video = document.getElementById("remoteVideo1"+obj.streamId);
+		
+				}
+		
+				video.srcObject = obj.stream;	
+		
+			}
+		
+			function playVideo1(obj) {
+
+				console.log(obj.stream)
+		
+			
+				var room = roomOfStream[obj.streamId];
+		
+		
+				var video = document.getElementById("remoteVideo1"+obj.streamId);
+		
+				document.getElementById("remoteVideo"+obj.streamId).style.border = "none";
+		
+		
+				if (video == null) {
+					info(obj.streamId);
+					video = document.getElementById("remoteVideo1"+obj.streamId);
+		
+				}
+		
+				video.srcObject = obj.stream;
+		
+			}
+		
+		function playVideo_2(obj) {
+		
+		var video = document.getElementById("remoteVideo2"+obj);
+		
+		if (video == null) {
+		
+			info_1(obj);
+			video = document.getElementById("remoteVideo2"+obj);
+		
+		}
+		var facingMode = "user"; // Can be 'user' or 'environment' to access back or front camera (NEAT!)
+		var mediaConstraints = {
+	video : true,
+	audio : false };
+	
+	
+		navigator.mediaDevices.getUserMedia(mediaConstraints).then(function success(stream) {
+		video.srcObject = stream;
+		//video.play();
+		});
+		
+		}
+	
+	
+		
+			function createRemoteVideo(streamId) {
+				var player = document.createElement("div");
+				player.className = "sidebar";
+				player.id = "player"+streamId;
+				player.innerHTML = '<div class="card user_row " id="abc'+streamId+'" ><div class="container" style="overflow:auto;white-space:nowrap"><div class="row"><div class="col-xs-3 col-sm-3 col-md-3"><img src="" id="mute'+streamId+'"/><video  id="remoteVideo'+streamId+'" class="test1" autoplay playsinline style="width:119px;position:absolute;margin-left:-18px;margin-top:8px;border: 1px solid grey;height:90px;" ></video></div><div class="col-xs-1 col-sm-1 col-md-1"></div><div class="col-xs-3 col-sm-3 col-md-3" style="margin-top:4px;"><div style="margin-left:25px;margin-top:10px" class="video-overlay" id="remoteVideoss'+streamId+'"></div></div><div class="col-xs-3 col-sm-3 col-md-3"><ul style="margin-top:73px;list-style-type:none !important;display:inline-flex"><li id="enable_video1'+streamId+'"><img src="assets/Group 69.png" style="height:17px;margin-top:5px" alt=""></li><li id="disable_video1'+streamId+'" style="display: none;"><img src="assets/Group 68.png" style="height:17px;margin-top:4px" alt=""></li><li id="enable_audio1'+streamId+'"><img src="assets/Group 73.png" id="enable_audio1_1'+streamId+'" style="height:17px;margin-top:4px" alt=""></li><li id="disable_audio1'+streamId+'" style="display: none;"><img src="assets/Icon feather-mic-offf.png" style="height:17px;margin-top:4px" alt=""></li></ul> <ul class="animation_s" id="audio_level_container'+streamId+'" style="visibility:hidden"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li>  </ul> </></div></div></div></div>';
+		
+				document.getElementById("tab1").appendChild(player);
+		
+		
+				setInterval(() => {			
+					john_s();
+								}, 5000);
+		
+				var tab2 = document.getElementById('chat');
+				var tab1 = document.getElementById('chat1');
+		
+		
+				if($('ul li#chat').hasClass('active') == true)
+				{
+					document.getElementById("player"+streamId).style.display = "none";
+				}
+		
+		
+				tab2.addEventListener("click", function() {
+					document.getElementById("player"+streamId).style.display = "none";
+					document.getElementById("imgg_1").style.display = "none";
+					document.getElementById("imgg_2").style.display = "inline-block";
+					document.getElementById("imgg_3").style.display = "none";
+					document.getElementById("imgg_4").style.display = "inline-block";
+				}, false);
+		
+				tab1.addEventListener("click", function() {
+					document.getElementById("player"+streamId).style.display = "block";
+					document.getElementById("imgg_4").style.display = "none";
+					document.getElementById("imgg_3").style.display = "inline-block";
+					document.getElementById("imgg_2").style.display = "none";
+					document.getElementById("imgg_1").style.display = "inline-block";
+				}, false);
+		
+		
+			
+			
+			}
+		
+		
+			function john_s()
+			{
+				var numItems = $('.sidebar').length;
+				document.getElementById('tab_text1').innerHTML = "People"+"("+numItems+")";
+		
+			}
+		
+			function info(idd)
+			{
+				var player = document.getElementById("main");
+				var player1 = document.getElementById("main1");
+		
+				player.innerHTML = '<img src="" id="remoteVideo1_1'+idd+'"  class="rp img-responsive center-block"style="width: 20%;margin-top: 20%;width:160px;display:none"/><video  class="videoBackground "  id="remoteVideo1'+idd+'" disablepictureinpicture controls autoplay playsinline  ></video>';
+		
+				
+					
+			}
+		
+			function info_1(idd)
+			{
+	
+				var player = document.getElementById("main");
+				var player1 = document.getElementById("main1");
+		
+				player.innerHTML = '<img src="" id="remoteVideo1_2'+idd+'"  class="rp img-responsive center-block"style="width: 20%;margin-top: 20%;width:160px;display:none"/ ><video  class="videoBackground "  id="remoteVideo2'+idd+'" disablepictureinpicture controls autoplay playsinline  ></video>';
+		
+				
+					
+			}
+		
+		
+			function removeRemoteVideo(streamId) {
+				var video = document.getElementById("remoteVideo"+streamId);
+				if (video != null) {
+					var player = document.getElementById("player" + streamId);
+					video.srcObject = null;
+					document.getElementById("tab1").removeChild(player);
+		
+				}
+		
+			  webRTCAdaptor.stop(streamId);
+			}
+	
+			function removeRemoteVideo1(streamId) {
+				var video = document.getElementById("remoteVideo"+streamId);
+				if (video != null) {
+					var player = document.getElementById("player" + streamId);
+					video.srcObject = null;
+					document.getElementById("tab1").removeChild(player);
+		
+				}
+		
+			  webRTCAdaptor.stop(streamId);
+			}
+		
+		
+		
+			function update_strem1(strm_id,n_id)
+			{
+				$.ajax({
+							url:"https://videoserver.apprikart.com/kia_vc_api/v1/update_stream_id/?stream_id="+strm_id+"&room="+roomNameBox+"&display_name="+display_name+"&user_type=customer",
+							type:"get",
+							data:"json",
+							success : function(data)
+							{
+		
+								if(data.status == "success")
+								{
+									
+								}
+		
+							},
+		
+						});
+			}
+		
+		
+			
+		
+			function startAnimation() {
+		
+				$("#broadcastingInfo")
+						.fadeIn(
+								800,
+								function() {
+									$("#broadcastingInfo")
+											.fadeOut(
+													800,
+													function() {
+														var state = webRTCAdaptor
+																.signallingState(publishStreamId);
+														if (state != null
+																&& state != "closed") {
+															var iceState = webRTCAdaptor
+																	.iceConnectionState(publishStreamId);
+															if (iceState != null
+																	&& iceState != "failed"
+																	&& iceState != "disconnected") {
+																startAnimation();
+															}
+														}
+													});
+								});
+		
+			}
+			var pc_config = {
+				'iceServers' : [ {
+					'urls' : 'turn:onvideo.apprikart.com:3478',
+									 'username': "apprikart",
+									 'credential': "apprikart123"
+				} ]
+			};
+		
+			var sdpConstraints = {
+				OfferToReceiveAudio : false,
+				OfferToReceiveVideo : false
+		
+			};
+		
+			var mediaConstraints = {
+				video : true,
+				audio : true
+			};
+		
+			
+		
+			var websocketURL = "wss://onvideo.apprikart.com:5443/WebRTCAppEE/websocket";
+		
+			if (location.protocol.startsWith("https")) {
+				websocketURL = "wss://onvideo.apprikart.com:5443/WebRTCAppEE/websocket";
+			}
+	
+			$("#overlay").fadeIn(300);
+			var executed1 = false;
+		
+			var intervalId;
+			var countries = [];
+			var webRTCAdaptor = null;
+		
+			function initWebRTCAdaptor(publishImmediately, autoRepublishEnabled) 
+			{
+			 webRTCAdaptor = new WebRTCAdaptor(	
+					{
+		
+		
+						websocket_url : websocketURL,
+						mediaConstraints : mediaConstraints,
+						peerconnection_config : pc_config,
+						sdp_constraints : sdpConstraints,
+						localVideoId : "localVideo",
+						isPlayMode : playOnly,
+						debug : true,
+						callback : (info, obj) => {
+							//console.log(info)
+							if (info == "initialized") {
+		
+								if (publishImmediately) {
+									webRTCAdaptor.publish(streamId, token)
+								}
+		
+								joinRoom();
+							
+							
+		
+								if(playOnly){
+									isCameraOff = true;
+									handleCameraButtons();
+								}
+							}
+							else if(info == "pong")
+							{
+								$("#overlay").fadeOut(300);
+		
+							}
+							else if (info == "joinedTheRoom") {
+								var room = obj.ATTR_ROOM_NAME;
+								roomOfStream[obj.streamId] = room;
+								console.log("joined the room: "
+										+ roomOfStream[obj.streamId]);
+		
+		
+								if (!executed1)
+								{
+								update_strem1(obj.streamId,localStorage.getItem("id"))
+								playVideo_2(obj.streamId);
+								localStorage.setItem("strm_iod",obj.streamId
+								);
+								document.getElementById("localVideo").style.border = "2px solid skyblue";
+		
+								executed1 = true;
+		
+		
+								}
+		
+								publishStreamId = obj.streamId
+								$("#overlay").fadeOut(300);
+								if(playOnly) {
+		
+									
+									isCameraOff = true;
+									handleCameraButtons();
+								}
+								else {
+									publish(obj.streamId, token);
+								}
+								
+								if (obj.streams != null) {
+									obj.streams.forEach(function(item) {
+										console.log("Stream joined with ID: "+item);
+										webRTCAdaptor.play(item, token,
+										roomNameBox);
+									});
+									streamsList = obj.streams;
+								}
+								roomTimerId = setInterval(() => {			
+									webRTCAdaptor.getRoomInfo(roomNameBox, publishStreamId);
+								}, 5000);
+							}
+							else if (info == "play_finished")
+							{
+	
+							}
+							else if (info == "newStreamAvailable") 
+							{
+	
+								
+	
+								console.log(isCameraOff +"-"+ isMicMuted)
+	
+	
+								var inc = obj.streamId;							
+	
+	
+								localStorage.setItem("strem_id",obj.streamId)
+								
+								//alert(localStorage.getItem("length_obj"))
+	
+								$(".test1").removeClass("testing");
+	
+								$("#remoteVideo"+localStorage.getItem("length_obj")).addClass("testing");
+	
+								//console.log(obj)
+	
+	
+								playVideo(obj);
+		
+								var ttt = document.getElementById("remoteVideo"+obj.streamId);
+								document.getElementById("localVideo").style.border = "none";
+		
+								ttt.addEventListener("click", function() {
+		
+		
+								playVideo1(obj);
+	
+								$(".test1").removeClass("testing");
+	
+								$("#remoteVideo"+obj.streamId).addClass("testing");
+		
+								document.getElementById("localVideo").style.border = "none";
+		
+								}, false);
+		
+								var loca_v = document.getElementById('localVideo');
+		
+								loca_v.addEventListener("click", function() {
+		
+								//alert(localStorage.getItem("strm_iod"))
+								playVideo_2(localStorage.getItem("strm_iod"));
+	
+								$(".test1").removeClass("testing");
+	
+		
+								document.getElementById("localVideo").style.border = "2px solid skyblue";
+								
+								}, false);
+							
+							$.ajax({
+							url:"https://videoserver.apprikart.com/kia_vc_api/v1/get_display_name/?stream_id="+obj.streamId+"&room="+localStorage.getItem("room")+"",
+							type:"get",
+							data:"json",
+							success : function(data)
+							{
+		
+								if(document.getElementById("remoteVideoss"+obj.streamId) == "null")
+								{
+		
+								}
+								else
+								{
+									document.getElementById("remoteVideoss"+obj.streamId).innerHTML = data.display_name;
+		
+								}
+				
+		
+							}
+							});
+		
+							} 
+							else if (info == "publish_started") {
+		
+								console.debug("publish started to room: "+ roomOfStream[obj.streamId]);
+								startAnimation();
+								webRTCAdaptor.getStreamInfo(streamId); 
+								webRTCAdaptor.enableStats(obj.streamId);
+							if (autoRepublishEnabled && autoRepublishIntervalJob == null) 
+								{
+									autoRepublishIntervalJob = setInterval(() => {
+										checkAndRepublishIfRequired();
+									}, 3000);
+								}
+								webRTCAdaptor.enableStats(obj.streamId);
+							} 
+							else if (info == "play_started") {
+				
+								webRTCAdaptor.getStreamInfo(streamId); 
+								webRTCAdaptor.enableStats(obj.streamId);
+	
+								
+	
+							}
+							else if (info == "publish_finished") {
+								console.debug("publish finished");
+		
+								if (streamsList != null) {
+									streamsList.forEach(function(item) {
+										removeRemoteVideo(item);
+									});
+								}
+							} 
+							else if (info == "screen_share_stopped") {
+								console.log("screen share stopped");
+							}
+							else if (info == "browser_screen_share_supported") {
+								screen_share_checkbox.disabled = false;
+								console.log("browser screen share supported");
+								browser_screen_share_doesnt_support.style.display = "none";
+							} 
+							else if (info == "refreshConnection") {
+									  checkAndRepublishIfRequired();
+								} 
+							else if (info == "leavedFromRoom") 
+							{
+								var room = obj.ATTR_ROOM_NAME;
+								console.debug("leaved from the room:" + room);
+								if(playOnly) {
+								
+		
+								}
+								if (roomTimerId != null)
+								{
+									clearInterval(roomTimerId);
+								}
+		
+							} 
+							else if (info == "closed") {
+								  if (typeof obj != "undefined") {
+									console.log("Connecton closed: " + JSON.stringify(obj));
+									//removeRemoteVideo(obj.streamId);
+	
+								  }
+							} 
+							else if (info == "play_finished") 
+							{
+							
+	
+		
+								console.log("play_finished");
+								removeRemoteVideo(obj.streamId);
+								var player = document.getElementById("main");		
+								player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;margin-top: 10%;width:160px">';
+				
+		
+							} 
+							else if (info == "streamInformation") {
+								streamInformation(obj);
+	
+							
+							} 
+							else if (info == "roomInformation") {
+	
+								var obj_length = (obj.streams)
+	
+								localStorage.setItem("length_obj",obj_length[obj_length.length - 1])
+	
+						
+	
+	
+								for(var ba = 0; ba<obj_length.length; ba++)
+								{
+								}
+	
+								for(let str of obj.streams){
+									
+									if(!streamsList.includes(str)){
+										webRTCAdaptor.play(str, token,
+										roomNameBox);
+									}
+								}
+								for(let str of streamsList){
+									if(!obj.streams.includes(str)){
+										removeRemoteVideo(str);
+									}
+								}
+								streamsList=obj.streams;
+							}
+							else if (info == "data_channel_opened") {
+								console.log("Data Channel open for stream id", obj );
+								isDataChannelOpen = true;
+								if(isCameraOff == true)
+								{
+									
+									
+									sendNotificationEvent("CAM_TURNED_OFF");
+	
+								}
+								 if(isMicMuted == true)
+								{
+									muteLocalMic();
+									sendNotificationEvent("MIC_MUTED");
+	
+	
+								}
+	
+								if(isCameraOff == false)
+								{
+									sendNotificationEvent("CAM_TURNED_ON");
+	
+	
+								}
+	
+								if(isMicMuted == false)
+								{
+									sendNotificationEvent("MIC_UNMUTED");
+	
+								}
+							} 
+							else if (info == "data_channel_closed") {
+								console.log("Data Channel closed for stream id", obj );
+								if (streamsList != null) {
+									streamsList.forEach(function(item) {
+										removeRemoteVideo1(item);
+									});
+								}		
+								console.log(obj +"-"+publishStreamId)
+								isDataChannelOpen = false;
+								
+							}
+							else if (info == "ice_connection_state_changed") {
+							console.log("iceConnectionState Changed: ",JSON.stringify(obj));
+							var status = JSON.stringify(obj);
+	
+							if(status.state == "disconnected")
+							{
+	
+												
+							}
+	
+							}
+							else if (info == "updated_stats") 
+							{
+	
+	
+	
+								var mic_off = localStorage.getItem("mic_off");
+								console.log(mic_off)
+	
+	
+								//var audioLevel = obj.audioLevel * 1000;
+	
+								if(mic_off == "mic_on")
+								{
+	
+								
+								if (obj.audioLevel * 1000 > 5)
+								{
+									console.log(obj.audioLevel * 1000 + "-" +obj.streamId)
+	
+									document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_1.png";
+								}
+								 if (obj.audioLevel * 1000 > 10)
+								{
+									console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	
+									document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_2.png";
+								}
+								 if (obj.audioLevel * 1000 > 15)
+								{
+									console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	
+									document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_3.png";
+								}
+								 if (obj.audioLevel * 1000 > 30)
+								{
+									console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	
+									document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_4.png";
+								}
+								 if (obj.audioLevel * 1000 > 50)
+								{
+									console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	
+									document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_5.png";
+								}
+								 if (obj.audioLevel * 1000 > 80)
+								{
+									console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	
+									document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_6.png";
+								}
+								 if (obj.audioLevel * 1000 > 100)
+								{
+									console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	
+									document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_7.png";
+								}
+								if (obj.audioLevel * 1000 > 500)
+								{
+									console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	
+									document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_7.png";
+								}
+								 if (obj.audioLevel * 10 > 200 )
+								{
+									console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	
+								}
+								else 
+								{
+	
+									console.log(obj.audioLevel * 1000 + "-" +obj.streamId)
+									 
+								}
+									}
+								
+									
+							}
+							else if(info == "data_received") {
+			
+		
+		var data = obj.event.data;
+	
+	
+		console.log("datareceived"+obj.event)
+	
+	  var receiveChannel = obj.event.currentTarget;
+	
+	
+	  receivedSize = 0;
+	
+		var datas_event1  = (JSON.parse(event.data))
+	
+		if (datas_event1.eventType == "TEXT_MESSAGE")
+		{
+			handleTextMessage(data);
+		
+		}
+		else if (datas_event1.eventType == "FILE_MESSAGE")
+		{
+		
+			handleImageData(data);
+		
+		}
+		else
+		{
+			handleNotificationEvent(obj);
+	
+		}
+		
+		
+					   
+							
+		
+								}	
+						},
+						callbackError : function(error, message) {
+							//some of the possible errors, NotFoundError, SecurityError,PermissionDeniedError
+		
+							if(error.indexOf("publishTimeoutError") != -1 && roomTimerId != null){
+								clearInterval(roomTimerId);
+							}
+		
+							console.log("Error: " + JSON.stringify(error));
+							var errorMessage = JSON.stringify(error);
+							if (typeof message != "undefined") {
+								errorMessage = message;
+							}
+							var errorMessage = JSON.stringify(error);
+							if (error.indexOf("NotFoundError") != -1) {
+								errorMessage = "Camera or Mic are not found or not allowed in your device.";
+							} else if (error.indexOf("NotReadableError") != -1
+									|| error.indexOf("TrackStartError") != -1) {
+								errorMessage = "Camera or Mic is being used by some other process that does not not allow these devices to be read.";
+							} else if (error.indexOf("OverconstrainedError") != -1
+									|| error.indexOf("ConstraintNotSatisfiedError") != -1) {
+								errorMessage = "There is no device found that fits your video and audio constraints. You may change video and audio constraints."
+							} else if (error.indexOf("NotAllowedError") != -1
+									|| error.indexOf("PermissionDeniedError") != -1) {
+								errorMessage = "You are not allowed to access camera and mic.";
+							} else if (error.indexOf("TypeError") != -1) {
+								errorMessage = "Video/Audio is required.";
+							} else if (error.indexOf("UnsecureContext") != -1) {
+								errorMessage = "Fatal Error: Browser cannot access camera and mic because of unsecure context. Please install SSL and access via https";
+							} else if (error.indexOf("WebSocketNotSupported") != -1) {
+								errorMessage = "Fatal Error: WebSocket not supported in this browser";
+							} else if (error.indexOf("no_stream_exist") != -1) {
+								//TODO: removeRemoteVideo(error.streamId);
+							} else if(error.indexOf("data_channel_error") != -1) {
+								errorMessage = "There was a error during data channel communication";
+							} else if (error.indexOf("ScreenSharePermissionDenied") != -1) {
+								//camera_checkbox.checked = true;
+								document.getElementById('camera_checkbox').checked = true;
+							} 
+		
+							//alert(errorMessage);
+		
+						}
+					});
+		
+				}
+		
+		
+				initWebRTCAdaptor(false, autoRepublishEnabled);
+		
+	
+		
+		
+		
+		
+		
+		</script>
+	
+	
+	
+	<script>
+		if (window.matchMedia("(orientation: portrait)").matches) {
+			//alert("P Mode");
+			
+			alert("Please Turn Your Device to Landscape Mode, We Are Not Supporting portrait Mode")
+	
+		}
+	
+		if (window.matchMedia("(orientation: landscape)").matches) {
+			
+		}
+	
+		window.addEventListener("orientationchange", function () {
+	
+			if (window.orientation == "0") {
+				alert("Please Turn Your Device to Landscape Mode, We Are Not Supporting portrait Mode")
+	
+			}
+			if (window.orientation == "90") {
+	
+			}
+	
+	
+		}, false);
+	</script>
+	
+	
+	</html>

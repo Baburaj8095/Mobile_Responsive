@@ -1,0 +1,584 @@
+
+
+
+@media (max-width: 1024px)
+{
+
+    .col-md-3 {
+        width: 23%;
+    }
+    
+
+}
+
+@media screen and (orientation:landscape) and (min-device-width: 620px) 
+and (max-device-width: 900px) and (max-height: 450px) 
+{
+    /* Your CSS Here*/
+    .test_for_demo{
+        display: none;
+    }
+
+    .col-xs-4 {
+        width: 50%;
+    }
+
+    .col-xs-8 {
+        width: 50%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+  
+
+    .col-xs-1 {
+        width: 0%;
+    }
+
+    .video-overlay
+    {
+        margin-left: 20px !important;
+        font-size: 12px;
+    }
+
+    #make_hud {
+        width: 98.5%;
+    }
+
+    #tab1 {
+        height: 130px;
+    }
+
+    #tab2 {
+        height: 120px;
+    }
+
+    .card.card-bottom {
+        margin-left: 10px;
+        width: 99%;
+    }
+
+    .video-block-fix{
+        height: 70vh !important;
+    }
+
+    video.videoBackground {
+        height: 70vh !important;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70vh;
+    }
+
+    #mg_boss
+    {
+        height: 15vh !important;
+        margin-top: 20px;
+    }
+
+
+
+    
+
+ }
+
+ 
+@media screen and (orientation:landscape) and (min-device-width: 620px) 
+and (max-device-width: 900px) and (max-height: 390px) 
+{
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70vh;
+    }
+
+    #mg_boss
+    {
+        height: 15vh !important;
+        margin-top: 20px;
+    }
+   
+    #tab1 {
+        height: 130px;
+    }
+
+    .col-xs-5 {
+        width: 50%;
+    }
+
+    #tab2 {
+        height: 120px;
+    }
+
+    .col-xs-4 {
+        width: 50%;
+    }
+
+    .col-xs-8 {
+        width: 50%;
+    }
+
+    .col-sm-3 {
+        width: 20%;
+    }
+
+    .col-xs-2 {
+        width: 10%;
+    }
+
+    #display_name
+    {
+        margin-left: 40px !important;
+        font-size: 10px;
+
+    }
+
+ 
+
+    .col-xs-1 {
+        width: 0%;
+    }
+
+    .video-overlay
+    {
+        margin-left: 40px !important;
+        font-size: 10px;
+    }
+
+    .video-block-fix {
+        height: 70vh;
+    }
+
+    video.videoBackground {
+        height: 70vh !important;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+  
+ }
+ 
+
+video.localvideo{
+    height: auto;
+    width: 100px; 
+    object-fit: cover;  
+    border-radius: 10px;
+    
+}
+
+video.videoBackground {
+    height: 85vh;
+    width: 100%; 
+    object-fit: cover;  
+    border-radius: 10px;
+}
+
+.card.card-bottom{
+    background-color: #ffffff;border-radius: 10px;
+    padding:10px;
+    
+}
+.video-block-fix{
+    height: 88vh;
+}
+.center-nav-buttons img{
+    height: 40px;
+}
+
+.right-footer{
+    background-color: #1F1F1F !important;
+    color:#ffffff;
+    font-weight: normal;
+}
+.card.user_row{
+    height:108px !important;
+   border: 1px solid #ededed;
+    margin-top:-10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+
+.display_icon{
+    list-style: none;
+    margin-top: 4rem;
+    padding-bottom:1rem;
+
+}
+ul.display_icon li {
+    display: inline;
+    float:right;
+    padding-bottom: 1rem;
+
+}
+.localvideo{margin-top:5px;}
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+ .video_text{
+    font-family:kiamedium;
+ }
+ 
+html,
+body {
+	height: 100%;
+}
+
+.flex-container {
+    
+    height: 99vh; 
+    /* background-color:gray;      */
+    justify-content: center; 
+     
+  }
+  .leftblock{
+    padding:10px;
+   
+  }
+  .rightblock{
+    padding:10px;
+    background-color: cadetblue;
+    height: 100%;
+    min-height: 100%;
+    padding:10px;
+    
+    
+  }
+  .videobody{
+    height: 85vh;
+    background-color: cornflowerblue;
+
+  }
+  .bottom-tools{
+      margin-top:10px;
+      position:relative;
+      /* background-color: coral; */
+      height: 10vh;
+      bottom: 0px;
+  }
+ 
+  
+/*   */
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 500px) and (max-height: 550px)   { 
+
+
+    .test_for_demo{
+        display: none;
+    }
+
+    .col-xs-4 {
+        width: 50%;
+    }
+
+    .col-xs-8 {
+        width: 50%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+  
+
+    .col-xs-1 {
+        width: 0%;
+    }
+
+    .video-overlay
+    {
+        margin-left: 20px !important;
+        font-size: 12px;
+    }
+
+    #make_hud {
+        width: 98.5%;
+    }
+
+    #tab1 {
+        height: 230px;
+    }
+
+    #tab2 {
+        height: 200px;
+    }
+
+    .card.card-bottom {
+        margin-left: 10px;
+        width: 99%;
+    }
+
+    .video-block-fix{
+        height: 70vh !important;
+    }
+
+    video.videoBackground {
+        height: 70vh !important;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70vh;
+    }
+
+    #mg_boss
+    {
+        height: 15vh !important;
+        margin-top: 20px;
+    }
+
+
+
+    
+
+
+    }
+
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and  (min-height: 400px) and (max-height: 450px)   { 
+   
+        .test_for_demo{
+            display: none;
+        }
+    
+        .col-xs-4 {
+            width: 50%;
+        }
+    
+        .col-xs-8 {
+            width: 50%;
+        }
+    
+        .col-sm-3 {
+            width: 25%;
+        }
+    
+      
+    
+        .col-xs-1 {
+            width: 0%;
+        }
+    
+        .video-overlay
+        {
+            margin-left: 20px !important;
+            font-size: 12px;
+        }
+    
+        #make_hud {
+            width: 98.5%;
+        }
+    
+        #tab1 {
+            height: 200px;
+        }
+    
+        #tab2 {
+            height: 180px;
+        }
+    
+        .card.card-bottom {
+            margin-left: 10px;
+            width: 99%;
+        }
+    
+        .video-block-fix{
+            height: 70vh !important;
+        }
+    
+        video.videoBackground {
+            height: 70vh !important;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            height: 70vh;
+        }
+    
+        #mg_boss
+        {
+            height: 15vh !important;
+            margin-top: 20px;
+        }
+    
+    
+    
+       
+   
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 250px) and (max-height: 350px)   { 
+   
+        .test_for_demo{
+            display: none;
+        }
+    
+        .col-xs-4 {
+            width: 50%;
+        }
+    
+        .col-xs-8 {
+            width: 50%;
+        }
+    
+        .col-sm-3 {
+            width: 25%;
+        }
+    
+      
+    
+        .col-xs-1 {
+            width: 0%;
+        }
+    
+        .video-overlay
+        {
+            margin-left: 20px !important;
+            font-size: 12px;
+        }
+    
+        #make_hud {
+            width: 98.5%;
+        }
+    
+        #tab1 {
+            height: 120px;
+        }
+    
+        #tab2 {
+            height: 100px;
+        }
+    
+        .card.card-bottom {
+            margin-left: 10px;
+            width: 99%;
+        }
+    
+        .video-block-fix{
+            height: 70vh !important;
+        }
+    
+        video.videoBackground {
+            height: 70vh !important;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            height: 70vh;
+        }
+    
+        #mg_boss
+        {
+            height: 15vh !important;
+            margin-top: 20px;
+        }
+    
+    
+   
+   
+    }
+
+
+
+    
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 550px) and  (max-height: 650px)   { 
+
+
+    .test_for_demo{
+        display: none;
+    }
+
+    .col-xs-4 {
+        width: 50%;
+    }
+
+    .col-xs-8 {
+        width: 50%;
+    }
+
+    .col-sm-3 {
+        width: 25%;
+    }
+
+  
+
+    .col-xs-1 {
+        width: 0%;
+    }
+
+    .video-overlay
+    {
+        margin-left: 20px !important;
+        font-size: 12px;
+    }
+
+    #make_hud {
+        width: 98.5%;
+    }
+
+    #tab1 {
+        height: 260px;
+    }
+
+    #tab2 {
+        height: 235px;
+    }
+
+    .card.card-bottom {
+        margin-left: 10px;
+        width: 99%;
+    }
+
+    .video-block-fix{
+        height: 70vh !important;
+    }
+
+    video.videoBackground {
+        height: 70vh !important;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70vh;
+    }
+
+    #mg_boss
+    {
+        height: 15vh !important;
+        margin-top: 20px;
+    }
+
+
+
+
+
+    }
