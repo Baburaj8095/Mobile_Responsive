@@ -10,9 +10,13 @@
     
 
 }
+orientation : landscape
+/* @media screen and (orientation:landscape) and (min-device-width: 620px) 
+and (max-device-width: 900px) and (max-height: 450px)  */
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 640px) 
+                   and (orientation: landscape) 
 
-@media screen and (orientation:landscape) and (min-device-width: 620px) 
-and (max-device-width: 900px) and (max-height: 450px) 
 {
     /* Your CSS Here*/
     .test_for_demo{
