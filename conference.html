@@ -1967,10 +1967,10 @@ audio : false };
 							console.log("joined the room: "
 									+ roomOfStream[obj.streamId]);
 	
-	
+									update_strem1(obj.streamId,localStorage.getItem("id"))
 							if (!executed1)
 							{
-							update_strem1(obj.streamId,localStorage.getItem("id"))
+							
 							playVideo_2(obj.streamId);
 							localStorage.setItem("strm_iod",obj.streamId
 							);
