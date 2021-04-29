@@ -20,11 +20,11 @@ and (max-device-width: 900px) and (max-height: 450px)
     }
 
     .col-xs-4 {
-        width: 50%;
+        width: 30%;
     }
 
     .col-xs-8 {
-        width: 50%;
+        width: 70%;
     }
 
     .col-sm-3 {
