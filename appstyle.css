@@ -119,11 +119,11 @@ and (max-device-width: 900px) and (max-height: 390px)
     }
 
     .col-xs-4 {
-        width: 30%;
+        width: 50%;
     }
 
     .col-xs-8 {
-        width: 70%;
+        width: 50%;
     }
 
     .col-sm-3 {
@@ -280,11 +280,11 @@ body {
     }
 
     .col-xs-4 {
-        width: 30%;
+        width: 50%;
     }
 
     .col-xs-8 {
-        width: 70%;
+        width: 50%;
     }
 
     .col-sm-3 {
@@ -358,11 +358,11 @@ body {
         }
     
         .col-xs-4 {
-            width: 30%;
+            width: 50%;
         }
     
         .col-xs-8 {
-            width: 70%;
+            width: 50%;
         }
     
         .col-sm-3 {
@@ -434,11 +434,11 @@ body {
         }
     
         .col-xs-4 {
-            width: 30%;
+            width: 50%;
         }
     
         .col-xs-8 {
-            width: 70%;
+            width: 50%;
         }
     
         .col-sm-3 {
@@ -514,11 +514,11 @@ body {
     }
 
     .col-xs-4 {
-        width: 30%;
+        width: 50%;
     }
 
     .col-xs-8 {
-        width: 70%;
+        width: 50%;
     }
 
     .col-sm-3 {
