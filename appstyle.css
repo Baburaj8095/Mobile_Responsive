@@ -14,9 +14,27 @@
 @media screen and (orientation:landscape) and (min-device-width: 620px) 
 and (max-device-width: 900px) and (max-height: 450px) 
 {
-	.inpsze{
-		font-size:16px !important;
-	}
+	
+.inpsze {
+    font-size: 11px !important;
+    
+}
+
+.inpsze::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 0.4em;
+}
+
+.inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.4em;
+}
+
+.inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
+     font-size: 0.4em;
+}
+
+.inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 0.4em;
+} 
 	input[type="color"],
 input[type="date"],
 input[type="datetime"],
@@ -121,9 +139,27 @@ textarea {
 @media screen and (orientation:landscape) and (min-device-width: 620px) 
 and (max-device-width: 900px) and (max-height: 390px) 
 {
-	.inpsze{
-		font-size:16px !important;
-	}
+	
+.inpsze {
+    font-size: 11px !important;
+    
+}
+
+.inpsze::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 0.4em;
+}
+
+.inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.4em;
+}
+
+.inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
+     font-size: 0.4em;
+}
+
+.inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 0.4em;
+} 
 	input[type="color"],
 input[type="date"],
 input[type="datetime"],
@@ -327,10 +363,27 @@ body {
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 500px) and (max-height: 550px)   {
-	.inpsze{
-		font-size:16px !important;
-	}
 	
+.inpsze {
+    font-size: 11px !important;
+    
+}
+
+.inpsze::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 0.4em;
+}
+
+.inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.4em;
+}
+
+.inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
+     font-size: 0.4em;
+}
+
+.inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 0.4em;
+} 
 	input[type="color"],
 input[type="date"],
 input[type="datetime"],
@@ -433,9 +486,27 @@ textarea {
 
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) and  (min-height: 400px) and (max-height: 450px)   {
-	    .inpsze{
-		font-size:16px !important;
-	}
+	   
+.inpsze {
+    font-size: 11px !important;
+    
+}
+
+.inpsze::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 0.4em;
+}
+
+.inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.4em;
+}
+
+.inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
+     font-size: 0.4em;
+}
+
+.inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 0.4em;
+} 
 	    input[type="color"],
 input[type="date"],
 input[type="datetime"],
@@ -535,9 +606,27 @@ textarea {
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 250px) and (max-height: 350px)   {
-	    .inpsze{
-		font-size:16px !important;
-	}
+	   
+.inpsze {
+    font-size: 11px !important;
+    
+}
+
+.inpsze::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 0.4em;
+}
+
+.inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.4em;
+}
+
+.inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
+     font-size: 0.4em;
+}
+
+.inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 0.4em;
+} 
 	    input[type="color"],
 input[type="date"],
 input[type="datetime"],
@@ -640,9 +729,27 @@ textarea {
     
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 550px) and  (max-height: 650px)   { 
-	.inpsze{
-		font-size:16px !important;
-	}
+	
+.inpsze {
+    font-size: 11px !important;
+    
+}
+
+.inpsze::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 0.4em;
+}
+
+.inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 0.4em;
+}
+
+.inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
+     font-size: 0.4em;
+}
+
+.inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 0.4em;
+} 
 	input[type="color"],
 input[type="date"],
 input[type="datetime"],
