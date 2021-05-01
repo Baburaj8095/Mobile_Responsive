@@ -1,5 +1,6 @@
 
 
+
 @media (max-width: 1024px)
 {
 
@@ -13,81 +14,6 @@
 @media screen and (orientation:landscape) and (min-device-width: 620px) 
 and (max-device-width: 900px) and (max-height: 450px) 
 {
-    .move{
-        margin-left:40px !important;
-    }
-	input[type="text"]:focus, input[type="password"]:focus,
-textarea:focus, select:focus {
-  font-size: 16px;
-}
-   input{
-  font-size: 16px;
-}
-
-.myClass {
-  font-size: 2em;
- 
-}
-
-.myClass::-webkit-input-placeholder { /* WebKit browsers */
-  font-size: 0.69em;
-}
-
-.myClass:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-size: 0.69em;
-}
-
-.myClass::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-size: 0.69em;
-}
-
-.myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-size: 0.69em;
-}
-.sidenav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #000000;
-    font-family: kiamedium;
-    display: block;
-    transition: 0.3s;
-}
-.closebtn {
-  position: absolute;
- 
-  top: -18;
-  right: 25px;
-  font-size: 25px !important;
-  margin-left: 50px;
-}
-
-.wrapper input[type="text"] {
-    position: relative; 
-}
-
-input { font-family: 'FontAwesome'; } /* This is for the placeholder */
-
-/* .wrapper:after {
-    font-family: 'FontAwesome';
-   
-    position: relative;
-    left: -30px;
-    content: "\f1d8";
-} */
     /* Your CSS Here*/
     .test_for_demo{
         display: none;
@@ -167,82 +93,7 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
 @media screen and (orientation:landscape) and (min-device-width: 620px) 
 and (max-device-width: 900px) and (max-height: 390px) 
 {
-    .move{
-        margin-left:40px !important;
-    }
-input[type="text"]:focus, input[type="password"]:focus,
-textarea:focus, select:focus {
-  font-size: 16px;
-}
-   input{
-  font-size: 16px;
-}
 
-.myClass {
-  font-size: 2em;
- 
-}
-
-.myClass::-webkit-input-placeholder { /* WebKit browsers */
-  font-size: 0.69em;
-}
-
-.myClass:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-size:0.69em;
-}
-
-.myClass::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-size: 0.69em;
-}
-
-.myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-size: 0.69em;
-}
-
-.sidenav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #000000;
-    font-family: kiamedium;
-    display: block;
-    transition: 0.3s;
-}
-.closebtn {
-  position: absolute;
- 
-  top: -18;
-  right: 25px;
-  font-size: 25px !important;
-  margin-left: 50px;
-}
-
-.wrapper input[type="text"] {
-    position: relative; 
-}
-
-input { font-family: 'FontAwesome'; } /* This is for the placeholder */
-/* 
-.wrapper:after {
-    font-family: 'FontAwesome';
- 
-    position: relative;
-    left: -30px;
-    content: "\f1d8";
-} */
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -422,81 +273,7 @@ body {
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 500px) and (max-height: 550px)   { 
-    .move{
-        margin-left:40px !important;
-    }
-    .sidenav{
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #FFFFFF;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-    }
-    
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #000000;
-        font-family: kiamedium;
-        display: block;
-        transition: 0.3s;
-    }
-    .closebtn {
-      position: absolute;
-     
-      top: -18;
-      right: 25px;
-      font-size: 25px !important;
-      margin-left: 50px;
-    }
-    
-    .wrapper input[type="text"] {
-        position: relative; 
-    }
-    
-    input { font-family: 'FontAwesome'; } /* This is for the placeholder */
-    
-    /* .wrapper:after {
-        font-family: 'FontAwesome';
-        
-        position: relative;
-        left: -30px;
-        content: "\f1d8";
-    } */
-input[type="text"]:focus, input[type="password"]:focus,
-textarea:focus, select:focus {
-  font-size: 16px;
-}
-   input{
-  font-size: 16px;
-}
 
-.myClass {
-  font-size: 2em;
- 
-}
-
-.myClass::-webkit-input-placeholder { /* WebKit browsers */
-  font-size: 0.69em;
-}
-
-.myClass:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-size: 0.69em;
-}
-
-.myClass::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-size: 0.69em;
-}
-
-.myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-size: 0.69em;
-}
 
     .test_for_demo{
         display: none;
@@ -575,74 +352,7 @@ textarea:focus, select:focus {
 
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) and  (min-height: 400px) and (max-height: 450px)   { 
-        .move{
-            margin-left:40px !important;
-        }
-        input[type="text"]:focus, input[type="password"]:focus,
-textarea:focus, select:focus {
-  font-size: 16px;
-}
-   input{
-  font-size: 16px;
-}
-
-.myClass {
-  font-size: 2em;
- 
-}
-
-.myClass::-webkit-input-placeholder { /* WebKit browsers */
-  font-size: 0.69em;
-}
-
-.myClass:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-size: 0.69em;
-}
-
-.myClass::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-size: 0.69em;
-}
-
-.myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-size: 0.69em;
-}
-.sidenav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #000000;
-    font-family: kiamedium;
-    display: block;
-    transition: 0.3s;
-}
-.closebtn {
-  position: absolute;
- 
-  top: -18;
-  right: 25px;
-  font-size: 25px !important;
-  margin-left: 50px;
-}
-
-.wrapper input[type="text"] {
-    position: relative; 
-}
-
-input { font-family: 'FontAwesome'; } /* This is for the placeholder */
-
+   
         .test_for_demo{
             display: none;
         }
@@ -718,75 +428,7 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 250px) and (max-height: 350px)   { 
-        .move{
-            margin-left:40px !important;
-        }
-  
-  
-        input[type="text"]:focus, input[type="password"]:focus,
-textarea:focus, select:focus {
-  font-size: 16px;
-}
-   input{
-  font-size: 16px;
-}
-
-.myClass {
-  font-size: 2em;
- 
-}
-
-.myClass::-webkit-input-placeholder { /* WebKit browsers */
-  font-size: 0.69em;
-}
-
-.myClass:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-size: 0.69em;
-}
-
-.myClass::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-size: 0.69em;
-}
-
-.myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-size:0.69em;
-}
-.sidenav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #000000;
-    font-family: kiamedium;
-    display: block;
-    transition: 0.3s;
-}
-.closebtn {
-  position: absolute;
- 
-  top: -18;
-  right: 25px;
-  font-size: 25px !important;
-  margin-left: 50px;
-}
-
-.wrapper input[type="text"] {
-    position: relative; 
-}
-
-input { font-family: 'FontAwesome'; } /* This is for the placeholder */
+   
         .test_for_demo{
             display: none;
         }
@@ -865,73 +507,8 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
     
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 550px) and  (max-height: 650px)   { 
-    .move{
-        margin-left:40px !important;
-    }
-input[type="text"]:focus, input[type="password"]:focus,
-textarea:focus, select:focus {
-  font-size: 16px;
-}
-   input{
-  font-size: 16px;
-}
 
-.myClass {
-  font-size: 2em;
- 
-}
 
-.myClass::-webkit-input-placeholder { /* WebKit browsers */
-  font-size: 0.69em;
-}
-
-.myClass:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-size: 0.69em;
-}
-
-.myClass::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-size: 0.69em;
-}
-
-.myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-size: 0.69em;
-}
-.sidenav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #000000;
-    font-family: kiamedium;
-    display: block;
-    transition: 0.3s;
-}
-.closebtn {
-  position: absolute;
- 
-  top: -18;
-  right: 25px;
-  font-size: 25px !important;
-  margin-left: 50px;
-}
-
-.wrapper input[type="text"] {
-    position: relative; 
-}
-
-input { font-family: 'FontAwesome'; } /* This is for the placeholder */
     .test_for_demo{
         display: none;
     }
@@ -1005,4 +582,3 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
 
 
     }
-
