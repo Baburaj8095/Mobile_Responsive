@@ -850,9 +850,44 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
 			<div style="margin-top:-40px">
 				<a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
 			<a href="#" style="font-family: kiamedium;font-size: 19px;padding-top: 11px;">Message</a>
+			<div id="all_messages" class="msg_history container"></div>
+			<form class="form form-horizontal" onSubmit="return false;">
+				<img id="loader1" src="images/loading (1).gif" width="36" height="36"
+					style="display: none;">
+
+				<div class="form-group">
+					<div class="col-xs-11 col-sm-11 col-md-11"
+						style="bottom:20;position: absolute;">
+
+						<div class="fake-input">
+							<input type="text" class="form-control" id="dataTextbox" 
+								placeholder="Type Your message Here"
+								style="border-radius: 13px;border:1px solid #707070">
+							<img src="images/attch.png" style="width: 30px;right: 50px;"
+								onclick="document.getElementById('file-input').click();">
+							<button id="send" type="submit"
+								style="cursor: pointer;background: 0;border: 0;margin-left: 100px;">
+								<img src="images/iconfinder_circle-content-send_1495053.svg"
+									style="right: -10;height: 35px;width: 35px;margin-top: -5px;">
+
+							</button>
+
+						</div>
+						<input id="file-input" type="file" name="name" multiple="true"
+							style="display: none" />
+					</div>
+
+				</div>
+
+
+
+
+		</div>
+		</form>
+
 			</div>
 			
-			<p class="wrapper"><input style="margin-left:10px;margin-top:520px;height:40px;font-size:14px;width:205px;border-radius: 23px;border: 1px solid #e1e1e1;font-family: kiamedium;" placeholder=" Send message   "/></p>
+			<!-- <p class="wrapper"><input id="dataTextbox" style="margin-left:10px;margin-top:520px;height:40px;font-size:14px;width:205px;border-radius: 23px;border: 1px solid #e1e1e1;font-family: kiamedium;" placeholder=" Send message   "/></p> -->
 		  </div>
 		  <script>
 			function toggleNav() {
@@ -864,7 +899,7 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
 	 
 	   } else {
 		 element.setAttribute("data-isshown", "true");
-		 element.style.width = "250px";
+		 element.style.width = "400px";
 	   }
 	 }
 		 </script>
@@ -960,7 +995,7 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
 										<!-- <progress id="sendProgress" max="0" value="0"></progress> -->
 
 
-										<div id="all_messages" class="msg_history container"></div>
+										<!-- <div id="all_messages" class="msg_history container"></div> -->
 
 										<br>
 										<form class="form form-horizontal" onSubmit="return false;">
@@ -1049,7 +1084,7 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
 
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1">
-							<img id="chat" src="images/mesge.png" onclick="toggleNav()" alt="" style="margin-left:-20px;height:61px;margin-top:-11px;cursor:pointer">
+							<img id="chat"  class="move" src="images/mesge.png" onclick="toggleNav()" alt="" style="margin-left:-20px;height:61px;margin-top:-11px;cursor:pointer">
 						</div>
 						<div class="col-xs-2 col-sm-2 col-md-2">
 
