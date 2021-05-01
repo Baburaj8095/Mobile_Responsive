@@ -1,6 +1,5 @@
 
 
-
 @media (max-width: 1024px)
 {
 
@@ -42,7 +41,50 @@ textarea:focus, select:focus {
 .myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
   font-size: 0.69em;
 }
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    font-family: kiamedium;
+    display: block;
+    transition: 0.3s;
+}
+.closebtn {
+  position: absolute;
+ 
+  top: -18;
+  right: 25px;
+  font-size: 25px !important;
+  margin-left: 50px;
+}
+
+.wrapper input[type="text"] {
+    position: relative; 
+}
+
+input { font-family: 'FontAwesome'; } /* This is for the placeholder */
+
+/* .wrapper:after {
+    font-family: 'FontAwesome';
+   
+    position: relative;
+    left: -30px;
+    content: "\f1d8";
+} */
     /* Your CSS Here*/
     .test_for_demo{
         display: none;
@@ -151,6 +193,50 @@ textarea:focus, select:focus {
   font-size: 0.69em;
 }
 
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    font-family: kiamedium;
+    display: block;
+    transition: 0.3s;
+}
+.closebtn {
+  position: absolute;
+ 
+  top: -18;
+  right: 25px;
+  font-size: 25px !important;
+  margin-left: 50px;
+}
+
+.wrapper input[type="text"] {
+    position: relative; 
+}
+
+input { font-family: 'FontAwesome'; } /* This is for the placeholder */
+/* 
+.wrapper:after {
+    font-family: 'FontAwesome';
+ 
+    position: relative;
+    left: -30px;
+    content: "\f1d8";
+} */
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -331,6 +417,50 @@ body {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 500px) and (max-height: 550px)   { 
 
+    .sidenav{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #FFFFFF;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #000000;
+        font-family: kiamedium;
+        display: block;
+        transition: 0.3s;
+    }
+    .closebtn {
+      position: absolute;
+     
+      top: -18;
+      right: 25px;
+      font-size: 25px !important;
+      margin-left: 50px;
+    }
+    
+    .wrapper input[type="text"] {
+        position: relative; 
+    }
+    
+    input { font-family: 'FontAwesome'; } /* This is for the placeholder */
+    
+    /* .wrapper:after {
+        font-family: 'FontAwesome';
+        
+        position: relative;
+        left: -30px;
+        content: "\f1d8";
+    } */
 input[type="text"]:focus, input[type="password"]:focus,
 textarea:focus, select:focus {
   font-size: 16px;
@@ -465,6 +595,42 @@ textarea:focus, select:focus {
 .myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
   font-size: 0.69em;
 }
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    font-family: kiamedium;
+    display: block;
+    transition: 0.3s;
+}
+.closebtn {
+  position: absolute;
+ 
+  top: -18;
+  right: 25px;
+  font-size: 25px !important;
+  margin-left: 50px;
+}
+
+.wrapper input[type="text"] {
+    position: relative; 
+}
+
+input { font-family: 'FontAwesome'; } /* This is for the placeholder */
 
         .test_for_demo{
             display: none;
@@ -569,7 +735,42 @@ textarea:focus, select:focus {
 .myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
   font-size:0.69em;
 }
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    font-family: kiamedium;
+    display: block;
+    transition: 0.3s;
+}
+.closebtn {
+  position: absolute;
+ 
+  top: -18;
+  right: 25px;
+  font-size: 25px !important;
+  margin-left: 50px;
+}
+
+.wrapper input[type="text"] {
+    position: relative; 
+}
+
+input { font-family: 'FontAwesome'; } /* This is for the placeholder */
         .test_for_demo{
             display: none;
         }
@@ -677,7 +878,42 @@ textarea:focus, select:focus {
 .myClass:-ms-input-placeholder { /* Internet Explorer 10+ */
   font-size: 0.69em;
 }
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    font-family: kiamedium;
+    display: block;
+    transition: 0.3s;
+}
+.closebtn {
+  position: absolute;
+ 
+  top: -18;
+  right: 25px;
+  font-size: 25px !important;
+  margin-left: 50px;
+}
+
+.wrapper input[type="text"] {
+    position: relative; 
+}
+
+input { font-family: 'FontAwesome'; } /* This is for the placeholder */
     .test_for_demo{
         display: none;
     }
