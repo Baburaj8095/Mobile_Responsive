@@ -25,7 +25,7 @@ and (max-device-width: 900px) and (max-height: 450px)
     
 }
 .imy{
-	float:right !important;
+	
 	
     height:10px !important;
 	}
@@ -159,8 +159,8 @@ and (max-device-width: 900px) and (max-height: 390px)
         width: 138px !important;
     }
 .imy{
-	float:right !important;
-	margin-right:-30px;
+	
+
     height:10px !important;
 	}	
 .inpsze {
@@ -398,7 +398,7 @@ body {
         width: 138px !important;
     }
 .imy{
-	float:right !important;
+	
 
     height:10px !important;
 	}	
@@ -534,7 +534,7 @@ textarea {
             width: 138px !important;
         }
         .imy{
-            float:right !important;
+           
            
             height:10px !important;
             }  
@@ -668,7 +668,7 @@ textarea {
             width: 138px !important;
         }
         .imy{
-            float:right !important;
+         
            
             height:10px !important;
             }
@@ -805,9 +805,9 @@ textarea {
     width: 138px !important;
 }
     .imy{
-        float:right !important;
+       
       
-        height:20px !important;
+        height:10px !important;
         }
 .inpsze {
     font-size: 11px !important;
