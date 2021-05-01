@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="assets/fonts/kial.css" type="text/css">
 	<link rel="stylesheet" href="assets/fonts/kiab.css" type="text/css">
 	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 
@@ -781,6 +782,49 @@
 		ul.animation_s li:nth-child(6) {
 			animation-delay: .6s;
 		}
+		.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    font-family: kiamedium;
+    display: block;
+    transition: 0.3s;
+}
+.closebtn {
+  position: absolute;
+ 
+  top: -18;
+  right: 25px;
+  font-size: 25px !important;
+  margin-left: 50px;
+}
+
+.wrapper input[type="text"] {
+    position: relative; 
+}
+
+input { font-family: 'FontAwesome'; } /* This is for the placeholder */
+
+.wrapper:after {
+    font-family: 'FontAwesome';
+    /* color:red; */
+    position: relative;
+    left: -30px;
+    content: "\f1d8";
+}
 	</style>
 	<link rel="stylesheet" href="appstyle.css" type="text/css">
 	<script src="https://use.fontawesome.com/1bc9c8ebdb.js"></script>
@@ -802,7 +846,28 @@
 				<span class="spinner"></span>
 			</div>
 		</div>
-
+		<div id="mySidenav" class="sidenav" >
+			<div style="margin-top:-40px">
+				<a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+			<a href="#" style="font-family: kiamedium;font-size: 19px;padding-top: 11px;">Message</a>
+			</div>
+			
+			<p class="wrapper"><input style="margin-left:10px;margin-top:520px;height:40px;font-size:14px;width:205px;border-radius: 23px;border: 1px solid #e1e1e1;font-family: kiamedium;" placeholder=" Send message   "/></p>
+		  </div>
+		  <script>
+			function toggleNav() {
+	   var element = document.getElementById("mySidenav")
+	   var shown = element.getAttribute("data-isshown");
+	   if (shown == "true") {
+		 element.setAttribute("data-isshown", "false");
+		 element.style.width = "0";
+	 
+	   } else {
+		 element.setAttribute("data-isshown", "true");
+		 element.style.width = "250px";
+	   }
+	 }
+		 </script>
 		<div class="row video-block-fix">
 			<div class="col-xs-8 col-sm-8 col-md-8">
 				<span class="main" id="main">
@@ -907,7 +972,7 @@
 													style="bottom:20;position: absolute;">
 
 													<div class="fake-input">
-														<input type="text" class="form-control myClass" id="dataTextbox"
+														<input type="text" class="form-control" id="dataTextbox" onclick="toggleNav()"
 															placeholder="Type Your message Here"
 															style="border-radius: 13px;border:1px solid #707070">
 														<img src="images/attch.png" style="width: 30px;right: 50px;"
