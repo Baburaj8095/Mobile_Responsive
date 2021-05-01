@@ -22,22 +22,22 @@ and (max-device-width: 900px) and (max-height: 450px)
 
 .inpsze::-webkit-input-placeholder { /* WebKit browsers */
     font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
     font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
 font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 } 
 	input[type="color"],
 input[type="date"],
@@ -151,22 +151,22 @@ and (max-device-width: 900px) and (max-height: 390px)
 
 .inpsze::-webkit-input-placeholder { /* WebKit browsers */
     font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
      font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
     font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 } 
 	input[type="color"],
 input[type="date"],
@@ -379,21 +379,21 @@ body {
 
 .inpsze::-webkit-input-placeholder { /* WebKit browsers */
    font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
  font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
     font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 .inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
    font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 } 
 	input[type="color"],
 input[type="date"],
@@ -505,22 +505,22 @@ textarea {
 
 .inpsze::-webkit-input-placeholder { /* WebKit browsers */
  font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
     font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
 font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 } 
 	    input[type="color"],
 input[type="date"],
@@ -629,22 +629,22 @@ textarea {
 
 .inpsze::-webkit-input-placeholder { /* WebKit browsers */
    font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
    font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
     font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 } 
 	    input[type="color"],
 input[type="date"],
@@ -756,22 +756,22 @@ textarea {
 
 .inpsze::-webkit-input-placeholder { /* WebKit browsers */
   font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze::-moz-placeholder { /* Mozilla Firefox 19+ */
   font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 }
 
 .inpsze:-ms-input-placeholder { /* Internet Explorer 10+ */
    font-size: 0.5em;
-    margin-top:-7px;
+    margin-top:-10px;
 } 
 	input[type="color"],
 input[type="date"],
