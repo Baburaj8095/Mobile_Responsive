@@ -62,8 +62,7 @@ width:17px !important;
  .attche{
             height:17px !important;
             width:17px !important;
-            margin-left:190px !important;
-            float:right !important;
+            right:-20px !important;
             } 
 .snt{
 	height:17px !important;
@@ -245,8 +244,8 @@ and (max-device-width: 900px) and (max-height: 390px)
  .attche{
             height:17px !important;
             width:17px !important;
-            margin-left:190px !important;
-              float:right !important;
+          
+            right:-20px !important;
             } 	
 	.snt{
 	height:17px !important;
@@ -528,8 +527,7 @@ font-size: 0.5em !important;
 	 .attche{
             height:17px !important;
             width:17px !important;
-            margin-left:190px !important;
-              float:right !important;
+            right:-20px !important;
             } 
 	.snt{
 	height:17px !important;
@@ -708,8 +706,7 @@ textarea {
 	 .attche{
             height:17px !important;
             width:17px !important;
-            margin-left:190px !important;
-            float:right !important;
+            right:-20px !important;
             } 
 	    .snt{
 	height:17px !important;
@@ -886,8 +883,7 @@ textarea {
 	 .attche{
             height:17px !important;
             width:17px !important;
-            margin-left:190px !important;
-               float:right !important;
+            right:-20px !important;
             }  
 	    .snt{
 	height:17px !important;
@@ -1067,8 +1063,7 @@ font-size: 0.5em !important;
 	 .attche{
             height:17px !important;
             width:17px !important;
-            margin-left:190px !important;
-            float:right !important;
+            right:-20px !important;
             } 
 	.snt{
 	height:17px !important;
