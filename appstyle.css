@@ -64,7 +64,7 @@ width:17px !important;
     width:11px !important;
   padding-top:-10px;
 
-  right:25px;
+  right:-11px;
   /* right:5px !important; */
             } 
 .snt{
@@ -249,7 +249,7 @@ and (max-device-width: 900px) and (max-height: 390px)
             width:11px !important;
           padding-top:-10px;
           
-          right:25px;
+          right:-11px;
           /* right:5px !important; */
             } 	
 	.snt{
@@ -534,7 +534,7 @@ font-size: 0.5em !important;
         width:11px !important;
       padding-top:-10px;
     
-      right:25px;
+      right:-11px;
       /* right:5 !important; */
             } 
 	.snt{
@@ -716,7 +716,7 @@ textarea {
         width:11px !important;
       padding-top:-10px;
      
-      right:25px;
+      right:-11px;
       /* right:5 !important; */
             } 
 	    .snt{
@@ -896,7 +896,7 @@ textarea {
         width:11px !important;
       padding-top:-10px;
     
-      right:25px;
+      right:-11px;
       /* right:5 !important; */
             }  
 	    .snt{
@@ -1079,7 +1079,7 @@ font-size: 0.5em !important;
         width:11px !important;
       padding-top:-10px;
     
-      right:25px;
+      right:-11px;
       /* right:5px !important; */
             } 
 	.snt{
