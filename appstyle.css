@@ -27,6 +27,9 @@ width:17px !important;
 .sjb{
 	margin-left:-30px !important;
 	}
+.sjb1{
+	margin-left:-24px !important;
+}
 .myClass {
   font-size: 0.9em;
   height:1.2em !important;
@@ -199,6 +202,9 @@ and (max-device-width: 900px) and (max-height: 390px)
 	.sjb{
 	margin-left:-30px !important;
 	}
+	.sjb1{
+	margin-left:-24px !important;
+}
 	.myClass {
   font-size: 0.9em;
     height:1.2em !important;
@@ -470,6 +476,9 @@ body {
 	.sjb{
 	margin-left:-30px !important;
 	}
+	.sjb1{
+	margin-left:-24px !important;
+}
 	.myClass {
   font-size: 0.9em;
    height:1.2em !important;
@@ -638,6 +647,9 @@ textarea {
 	    .sjb{
 	margin-left:-30px !important;
 	}
+	    .sjb1{
+	margin-left:-24px !important;
+}
 	    .myClass {
   font-size: 0.9em;
   height:1.2em !important;
@@ -804,6 +816,9 @@ textarea {
 	   .sjb{
 	margin-left:-30px !important;
 	}
+	    .sjb1{
+	margin-left:-24px !important;
+}
                 .myClass {
   font-size: 0.9em;
   height:1.2em !important;
@@ -973,6 +988,9 @@ textarea {
 	.sjb{
 	margin-left:-30px !important;
 	}
+	.sjb1{
+	margin-left:-24px !important;
+}
 	.myClass {
   font-size: 0.9em;
   height:1.2em !important;
