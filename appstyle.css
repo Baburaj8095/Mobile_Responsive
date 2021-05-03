@@ -24,11 +24,11 @@ width:17px !important;
     width:17px !important;
         
     }
-.sjb{
-	margin-left:-10px !important;
+	.sjb{
+        margin-left:-5px !important;
 	}
-.sjb1{
-	margin-left:-24px !important;
+	.sjb1{
+	margin-left:-14px !important;
 }
 .myClass {
   font-size: 0.9em;
@@ -199,12 +199,12 @@ and (max-device-width: 900px) and (max-height: 390px)
             width:17px !important;
                 
             }
-	.sjb{
-        margin-left:-10px !important;
-	}
-	.sjb1{
-	margin-left:-24px !important;
-}
+            .sjb{
+                margin-left:-5px !important;
+            }
+            .sjb1{
+            margin-left:-14px !important;
+        }
 	.myClass {
   font-size: 0.9em;
     height:1.2em !important;
@@ -474,10 +474,10 @@ body {
                 
             }
 	.sjb{
-        margin-left:-10px !important;
+        margin-left:-5px !important;
 	}
 	.sjb1{
-	margin-left:-24px !important;
+	margin-left:-14px !important;
 }
 	.myClass {
   font-size: 0.9em;
@@ -644,12 +644,12 @@ textarea {
                 width:17px !important;
                     
                 }
-	    .sjb{
-            margin-left:-10px !important;
-	}
-	    .sjb1{
-	margin-left:-24px !important;
-}
+                .sjb{
+                    margin-left:-5px !important;
+                }
+                .sjb1{
+                margin-left:-14px !important;
+            }
 	    .myClass {
   font-size: 0.9em;
   height:1.2em !important;
@@ -813,12 +813,12 @@ textarea {
                 width:17px !important;
                     
                 }
-	   .sjb{
-        margin-left:-10px !important;
-	}
-	    .sjb1{
-	margin-left:-24px !important;
-}
+                .sjb{
+                    margin-left:-5px !important;
+                }
+                .sjb1{
+                margin-left:-14px !important;
+            }
                 .myClass {
   font-size: 0.9em;
   height:1.2em !important;
@@ -985,12 +985,12 @@ textarea {
             width:17px !important;
                 
             }
-	.sjb{
-        margin-left:-10px !important;
-	}
-	.sjb1{
-	margin-left:-24px !important;
-}
+            .sjb{
+                margin-left:-5px !important;
+            }
+            .sjb1{
+            margin-left:-14px !important;
+        }
 	.myClass {
   font-size: 0.9em;
   height:1.2em !important;
