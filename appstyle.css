@@ -60,9 +60,10 @@ width:17px !important;
  font-size: 0.5em !important;
 }
  .attche{
-            height:17px !important;
-            width:17px !important;
-            right:-20px !important;
+    height:17px !important;
+    width:17px !important;
+  padding-top:-10px;
+    right:7px !important;
             } 
 .snt{
 	height:17px !important;
@@ -244,8 +245,8 @@ and (max-device-width: 900px) and (max-height: 390px)
  .attche{
             height:17px !important;
             width:17px !important;
-          
-            right:-20px !important;
+          padding-top:-10px;
+            right:7px !important;
             } 	
 	.snt{
 	height:17px !important;
@@ -525,9 +526,10 @@ font-size: 0.5em !important;
 font-size: 0.5em !important;
 }
 	 .attche{
-            height:17px !important;
-            width:17px !important;
-            right:-20px !important;
+        height:17px !important;
+        width:17px !important;
+      padding-top:-10px;
+        right:7px !important;
             } 
 	.snt{
 	height:17px !important;
@@ -704,9 +706,10 @@ textarea {
    font-size: 0.5em !important;
 }
 	 .attche{
-            height:17px !important;
-            width:17px !important;
-            right:-20px !important;
+        height:17px !important;
+        width:17px !important;
+      padding-top:-10px;
+        right:7px !important;
             } 
 	    .snt{
 	height:17px !important;
@@ -881,9 +884,10 @@ textarea {
    font-size: 0.5em !important;
 }
 	 .attche{
-            height:17px !important;
-            width:17px !important;
-            right:-20px !important;
+        height:17px !important;
+        width:17px !important;
+      padding-top:-10px;
+        right:7px !important;
             }  
 	    .snt{
 	height:17px !important;
@@ -1061,9 +1065,10 @@ font-size: 0.5em !important;
    font-size: 0.5em !important;
 }
 	 .attche{
-            height:17px !important;
-            width:17px !important;
-            right:-20px !important;
+        height:17px !important;
+        width:17px !important;
+      padding-top:-10px;
+        right:7px !important;
             } 
 	.snt{
 	height:17px !important;
