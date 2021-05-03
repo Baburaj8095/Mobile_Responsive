@@ -26,9 +26,11 @@ width:17px !important;
     }
 .sjb{
 	margin-left:-20px !important;
+    background-color: none !important;
 	}
 .sjb1{
 	margin-left:-24px !important;
+    background-color: none !important;
 }
 .myClass {
   font-size: 0.9em;
@@ -201,9 +203,11 @@ and (max-device-width: 900px) and (max-height: 390px)
             }
 	.sjb{
 	margin-left:-30px !important;
+    background-color: none !important;
 	}
 	.sjb1{
 	margin-left:-24px !important;
+    background-color: none !important;
 }
 	.myClass {
   font-size: 0.9em;
@@ -475,9 +479,11 @@ body {
             }
 	.sjb{
 	margin-left:-30px !important;
+    background-color: none !important;
 	}
 	.sjb1{
 	margin-left:-24px !important;
+    background-color: none !important;
 }
 	.myClass {
   font-size: 0.9em;
@@ -646,9 +652,11 @@ textarea {
                 }
 	    .sjb{
 	margin-left:-30px !important;
+    background-color: none !important;
 	}
 	    .sjb1{
 	margin-left:-24px !important;
+    background-color: none !important;
 }
 	    .myClass {
   font-size: 0.9em;
@@ -815,9 +823,11 @@ textarea {
                 }
 	   .sjb{
 	margin-left:-30px !important;
+    background-color: none !important;
 	}
 	    .sjb1{
 	margin-left:-24px !important;
+    background-color: none !important;
 }
                 .myClass {
   font-size: 0.9em;
@@ -987,9 +997,11 @@ textarea {
             }
 	.sjb{
 	margin-left:-30px !important;
+    background-color: none !important;
 	}
 	.sjb1{
 	margin-left:-24px !important;
+    background-color: none !important;
 }
 	.myClass {
   font-size: 0.9em;
