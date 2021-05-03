@@ -15,8 +15,8 @@
 and (max-device-width: 900px) and (max-height: 450px) 
 {
 .ricon{
-height:	9px !important;
-width:9px !important;
+height:	12px !important;
+width:12px !important;
 	
 }
 .myClass {
@@ -179,8 +179,8 @@ textarea {
 and (max-device-width: 900px) and (max-height: 390px) 
 {
 .ricon{
-height:	9px !important;
-width:9px !important;
+height:	12px !important;
+width:12px !important;
 	
 }
 	.myClass {
@@ -442,8 +442,8 @@ body {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 500px) and (max-height: 550px)   {
 	.ricon{
-height:	9px !important;
-width:9px !important;
+height:	12px !important;
+width:12px !important;
 	
 }
 	.myClass {
@@ -602,8 +602,8 @@ textarea {
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) and  (min-height: 400px) and (max-height: 450px)   {
 	    .ricon{
-height:	9px !important;
-width:9px !important;
+height:	12px !important;
+width:12px !important;
 	
 }
 	    .myClass {
@@ -760,8 +760,8 @@ textarea {
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 250px) and (max-height: 350px)   {
 	    .ricon{
-height:	9px !important;
-width:9px !important;
+height:	12px !important;
+width:12px !important;
 	
 }
 	    .myClass {
@@ -921,8 +921,8 @@ textarea {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 550px) and  (max-height: 650px)   { 
 	.ricon{
-height:	9px !important;
-width:9px !important;
+height:	12px !important;
+width:12px !important;
 	
 }
 	.myClass {
