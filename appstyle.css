@@ -16,7 +16,7 @@ and (max-device-width: 900px) and (max-height: 450px)
 {
 .myClass {
   font-size: 0.9em;
-  height:15px;
+  height:1.2em !important;
 }
 
 .myClass::-webkit-input-placeholder { /* WebKit browsers */
@@ -170,7 +170,7 @@ and (max-device-width: 900px) and (max-height: 390px)
 {
 	.myClass {
   font-size: 0.9em;
-  height:15px;
+    height:1.2em !important;
 }
 
 .myClass::-webkit-input-placeholder { /* WebKit browsers */
@@ -424,7 +424,7 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 500px) and (max-height: 550px)   {
 	.myClass {
   font-size: 0.9em;
-  height:15px;
+   height:1.2em !important;
 }
 
 .myClass::-webkit-input-placeholder { /* WebKit browsers */
@@ -575,7 +575,7 @@ textarea {
     @media only screen and (min-width: 768px) and (max-width: 1024px) and  (min-height: 400px) and (max-height: 450px)   {
 	    .myClass {
   font-size: 0.9em;
-   height:15px;
+  height:1.2em !important;
 }
 
 .myClass::-webkit-input-placeholder { /* WebKit browsers */
@@ -724,7 +724,7 @@ textarea {
     @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 250px) and (max-height: 350px)   {
 	    .myClass {
   font-size: 0.9em;
-   height:15px;
+  height:1.2em !important;
 }
 
 .myClass::-webkit-input-placeholder { /* WebKit browsers */
@@ -876,7 +876,7 @@ textarea {
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 550px) and  (max-height: 650px)   { 
 	.myClass {
   font-size: 0.9em;
-   height:15px;
+  height:1.2em !important;
 }
 
 .myClass::-webkit-input-placeholder { /* WebKit browsers */
