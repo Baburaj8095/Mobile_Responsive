@@ -383,8 +383,6 @@
 
 		img {
 			vertical-align: middle;
-			/* padding: 30px; */
-			margin-left: 10px;
 		}
 
 		/* 
@@ -406,6 +404,7 @@
 		.tabbable-line>.nav-tabs {
 			border: none;
 			margin: 0px;
+			margin-left: 5px;
 		}
 
 		.tabbable-line>.nav-tabs>li {
@@ -718,6 +717,8 @@
 				<span class="main" id="main">
 					<img src="images/Group 59.png" id="rp" class="rp img-responsive center-block"
 						style="width: 20%;width:160px">
+						<h3 style="text-align: center;">Waiting for the Host To Join Conference</h3>
+
 				</span>
 			</div>
 			<div class="col-xs-4 col-sm-4 col-md-4">
@@ -727,14 +728,14 @@
 					<div id="players" style="width:100%;margin-left:-4px !important;background-color: #ffffff;">
 						<div class="tabbable-panel">
 							<div class="tabbable-line">
-								<ul class="nav nav-tabs">
-									<li class="active rabi" id="chat1" style="font-size: 11px;">
+								<ul class="nav nav-tabs" >
+									<li class="active rabi" id="chat1" style="font-size: 15px;">
 										<a data-toggle="tab" href="#tab1" class="sjb">
 											<span class="tab_icon" id="imgg_1"><img src="images/Group 136.png" class="ricon"
-													style="   padding-bottom: 6px;padding-right:8px"></span>
-											<span class="tab_icon" id="imgg_2" style="display: none;"><img
+													style="     margin-left: 10px;  "></span>
+											<span class="tab_icon" id="imgg_2" style="display: none;    margin-left: 10px;"><img
 													src="images/Group 137.png"  class="ricon"
-													style="    padding-bottom: 6px;padding-right:8px"></span>
+													style="    "></span>
 
 											<span class="tab_text rabi" id="tab_text1" style="font-size: 11px;">People</span>
 
@@ -742,10 +743,10 @@
 									<li id="chat" class="rabi" style="font-size: 11px;"><a data-toggle="tab" href="#tab2" class="sjb1">
 
 											<span class="tab_icon" id="imgg_3"><img src="images/Group 138.png" class="riconn"
-													style="   padding-bottom: 6px;padding-right:5px"></span>
+													style="   "></span>
 											<span class="tab_icon" id="imgg_4" style="display: none;"><img
 													src="images/Group 139.png"class="riconn"
-													style="   padding-bottom: 6px;padding-right:5px"></span>
+													style="   "></span>
 
 											<span class="tab_text rabi" id="tab_text" style="font-size: 11px;">Chat</span>
 
@@ -765,7 +766,7 @@
 
 															<img src="" id="john">
 										
-															<video id="localVideo" autoplay muted playsinline style="margin-left:-22px;margin-top:8px;width:119px;border: 1px solid lightgray;height: 90px;"></video>
+															<video id="localVideo" autoplay muted playsinline style="margin-left:-10px;margin-top:8px;width:119px;border: 1px solid lightgray;height: 90px;"></video>
 														</div>
 														<div class="col-xs-1 col-sm-1 col-md-1">
 
@@ -854,7 +855,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row mgg" id="mg_boss">
+		<!-- <div class="row mgg" id="mg_boss">
 
 			<div class="col-sm-8" id="make_hud">
 
@@ -938,7 +939,65 @@
 				</div>
 			</div>
 
+		</div> -->
+
+		<div class="controls-bar-2">
+			<div class="controls">
+				<div class="icon icon-with-label">
+					<img src="images/Group-1.png" id="screen_share_checkbox"
+								style="cursor:pointer;margin-left: -15px;margin-top: 4px;height:31px;width:31px" alt=""
+								alt="" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
+								data-content="" data-html="true" style="height:34px;width:34px">
+							<a id="browser_screen_share_doesnt_support"
+								href="https://caniuse.com/#search=getDisplayMedia"></a>
+
+				</div>
+
+
+				<div class="icon icon-with-label">
+				
+				</div>
+
+
+				<div class="icon icon-with-label">
+					<img style="cursor: pointer;width: 40px;height: 40px;" id="turn_off_camera_button" src="assets/Group 56.png" style="width: 40px;height: 40px;">
+
+					<img style="cursor: pointer;display: none;width: 40px;height: 40px;"  id="turn_on_camera_button"
+					src="assets/Group 60.png" style="width: 40px;height: 40px;">
+
+				</div>
+
+				<div class="icon icon-with-label">
+					<img style="cursor: pointer;width: 40px;height: 40px;" id="end_vc" src="assets/Group 44.png"
+											style="margin-left:18px;width: 40px;height: 40px;"
+											onclick="window.location.href='index.html?'+localStorage.getItem('myParam')+''">
+
+
+				</div>
+
+				<div class="icon icon-with-label">
+					<img style="cursor: pointer;width: 40px;height: 40px;" id="mute_mic_button" src="assets/Group 57.png"
+											style="margin-left:18px;width: 40px;height: 40px;">
+											<img style="cursor: pointer;display: none;width: 40px;height: 40px;" id="unmute_mic_button"
+											src="assets/Group 59.png"
+											style="margin-left:18px;width: 40px;height: 40px;">
+
+				</div>
+
+				<div class="icon icon-with-label">
+				
+				</div>
+
+				<div class="icon icon-with-label">
+					<img src="images/Kia Logo new 139.png" alt="" class="img-full"
+					style="width: 100px;height: 40px;">
+				</div>
+
+
+			</div>
 		</div>
+         
+
 	</div>
 	</div>
 
@@ -1155,24 +1214,23 @@ formData.append('user_type', "customer");
 		var roomNameBox = localStorage.getItem("room");
 		var display_name = localStorage.getItem("display_name");
 	
-		document.getElementById("display_name").innerHTML = display_name;
-						if(display_name.length >=1 && display_name.length <=5)
-							{
-			
-							  document.getElementById('display_name').style.marginRight = "170px";
-							  
-							}
-							else if(display_name.length >=6 && display_name.length <=8)
-							{
-								document.getElementById('display_name').style.marginRight = "160px";
-	
-							}
-							else if(display_name.length >8 && display_name.length <=18)
-							{
-	
-			
-			document.getElementById('display_name').style.marginRight = "100px";
-							}
+		var display_name = localStorage.getItem("display_name");
+
+	document.getElementById("display_name").innerHTML = display_name;
+	if (display_name.length >= 1 && display_name.length <= 5) {
+
+		document.getElementById('display_name').style.marginRight = "170px";
+
+	}
+	else if (display_name.length >= 6 && display_name.length <= 8) {
+		document.getElementById('display_name').style.marginRight = "160px";
+
+	}
+	else if (display_name.length > 8 && display_name.length <= 18) {
+
+
+		document.getElementById('display_name').style.marginRight = "100px";
+	}
 	
 		var roomOfStream = new Array();
 		var streamsList = new Array();
@@ -1218,7 +1276,7 @@ formData.append('user_type', "customer");
 		
 	
 	
-			document.getElementById("display_name").style.marginRight= "90px";
+			document.getElementById("display_name").style.marginRight= "70px";
 			document.getElementById("localVideo").style.marginLeft = "-22px";
 	
 
@@ -1371,7 +1429,6 @@ formData.append('user_type', "customer");
 			document.getElementById("enable_video1"+eventStreamId).style.display = "none";
 			document.getElementById("disable_video1"+eventStreamId).style.display = "revert";
 	
-			document.getElementById("remoteVideoss"+eventStreamId).style.marginRight= "80px";
 			document.getElementById("remoteVideoss"+eventStreamId).style.marginTop= "10px";
 	
 			document.getElementById("mute"+eventStreamId).style.display = "block";
@@ -1503,7 +1560,6 @@ formData.append('user_type', "customer");
 			document.getElementById("enable_video1"+eventStreamId).style.display = "none";
 			document.getElementById("disable_video1"+eventStreamId).style.display = "revert";
 	
-			document.getElementById("remoteVideoss"+eventStreamId).style.marginRight= "80px";
 			document.getElementById("remoteVideoss"+eventStreamId).style.marginTop= "10px";
 	
 			document.getElementById("mute"+eventStreamId).style.display = "block";
@@ -1666,68 +1722,51 @@ formData.append('user_type', "customer");
 		}
 	
 		function playVideo(obj) {
-			//alert(obj.length)
-			var room = roomOfStream[obj.streamId];
-			console.log("new stream available with id: "
-					+ obj.streamId + "on the room:" + room);
-	
-			var video = document.getElementById("remoteVideo"+obj.streamId);
-	
-			if (video == null) {
-				createRemoteVideo(obj.streamId);
-				info(obj.streamId);
-				video = document.getElementById("remoteVideo"+obj.streamId);
-				video = document.getElementById("remoteVideo1"+obj.streamId);
-	
-			}
-	
-			video.srcObject = obj.stream;	
-	
-		}
-	
-		function playVideo1(obj) {
-	
-		
-			var room = roomOfStream[obj.streamId];
-	
-	
-			var video = document.getElementById("remoteVideo1"+obj.streamId);
-	
-			document.getElementById("remoteVideo"+obj.streamId).style.border = "none";
-	
-	
-			if (video == null) {
-				info(obj.streamId);
-				video = document.getElementById("remoteVideo1"+obj.streamId);
-	
-			}
-	
-			video.srcObject = obj.stream;
-	
-		}
-	
-    function playVideo_2(obj) {
-	
-	var video = document.getElementById("remoteVideo2"+obj);
-	
-	if (video == null) {
-	
-		info_1(obj);
-		video = document.getElementById("remoteVideo2"+obj);
-	
-	}
-	var facingMode = "user"; 
-	var mediaConstraintss = {
-video : true,
-audio : false };
+		var video = document.getElementById("remoteVideo" + obj.streamId);
 
 
-	navigator.mediaDevices.getUserMedia(mediaConstraintss).then(function success(stream) {
-	video.srcObject = stream;
-	//video.play();
-	});
-	
+
+
+
+		var room = roomOfStream[obj.streamId];
+		console.log("new stream available with id: "
+			+ obj.streamId + "on the room:" + room);
+
+
+		if (video == null) {
+			createRemoteVideo(obj.streamId);
+			video = document.getElementById("remoteVideo" + obj.streamId);
+			video = document.getElementById("remoteVideo1" + obj.streamId);
+
+		}
+
+		video.srcObject = obj.stream;
+
+
+
 	}
+
+	function playVideo1(obj) {
+
+
+		var room = roomOfStream[obj.streamId];
+
+
+		var video = document.getElementById("remoteVideo1" + obj.streamId);
+
+
+
+		if (video == null) {
+			info(obj.streamId);
+			video = document.getElementById("remoteVideo1" + obj.streamId);
+
+		}
+
+		video.srcObject = obj.stream;
+
+	}
+	
+   
 
 
 	
@@ -1735,7 +1774,7 @@ audio : false };
 			var player = document.createElement("div");
 			player.className = "sidebar";
 			player.id = "player"+streamId;
-			player.innerHTML = '<div class="card user_row " id="abc'+streamId+'" ><div class="container" style="overflow:auto;white-space:nowrap"><div class="row"><div class="col-xs-3 col-sm-3 col-md-3"><img src="" id="mute'+streamId+'"/><video  id="remoteVideo'+streamId+'" class="test1" autoplay playsinline style="width:119px;position:absolute;margin-left:-18px;margin-top:8px;border: 1px solid grey;height:90px;" ></video></div><div class="col-xs-1 col-sm-1 col-md-1"></div><div class="col-xs-3 col-sm-3 col-md-3" style="margin-top:4px;"><div style="margin-left:25px;margin-top:10px" class="video-overlay disp" id="remoteVideoss'+streamId+'"></div></div><div class="col-xs-3 col-sm-3 col-md-3"><ul  class="admg" style="margin-top:73px;list-style-type:none !important;display:inline-flex"><li id="enable_video1'+streamId+'"><img src="assets/Group 69.png" style="height:17px;margin-top:5px" alt=""></li><li id="disable_video1'+streamId+'" style="display: none;"><img src="assets/Group 68.png" style="height:17px;margin-top:4px" alt=""></li><li id="enable_audio1'+streamId+'"><img src="assets/Group 73.png" id="enable_audio1_1'+streamId+'" style="height:17px;margin-top:4px" alt=""></li><li id="disable_audio1'+streamId+'" style="display: none;"><img src="assets/Icon feather-mic-offf.png" style="height:17px;margin-top:4px" alt=""></li></ul> <ul class="animation_s" id="audio_level_container'+streamId+'" style="visibility:hidden"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li>  </ul> </></div></div></div></div>';
+			player.innerHTML = '<div class="card user_row " id="abc'+streamId+'" ><div class="container" style="overflow:auto;white-space:nowrap"><div class="row"><div class="col-xs-3 col-sm-3 col-md-3"><img src="" id="mute'+streamId+'"/><video  id="remoteVideo'+streamId+'" class="test1" autoplay playsinline style="width:119px;position:absolute;margin-left:-18px;margin-top:8px;border: 1px solid grey;height:90px;" ></video></div><div class="col-xs-1 col-sm-1 col-md-1"></div><div class="col-xs-3 col-sm-3 col-md-3" style="margin-top:4px;"><div style="margin-left:25px;margin-top:10px;float:right;margin-right:15px" class="video-overlay" id="remoteVideoss'+streamId+'"></div></div><div class="col-xs-3 col-sm-3 col-md-3"><ul id="flx_pop" style="margin-top:73px;list-style-type:none !important;display:inline-flex"><li id="enable_video1'+streamId+'" class="extra1"><img src="assets/Group 69.png" style="height:17px;" alt=""></li><li id="disable_video1'+streamId+'" class="extra1" style="display: none;"><img src="assets/Group 68.png" style="height:17px;" alt=""></li><li id="enable_audio1'+streamId+'" class="extra2"><img src="assets/Group 73.png" id="enable_audio1_1'+streamId+'"  style="height:17px;" alt=""></li><li id="disable_audio1'+streamId+'" class="extra2" style="display: none;"><img src="assets/Icon feather-mic-offf.png" style="height:17px;" alt=""></li></ul> <ul class="animation_s" id="audio_level_container'+streamId+'" class="extra2" style="visibility:hidden"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li>  </ul> </></div></div></div></div>';
 	
 			document.getElementById("tab1").appendChild(player);
 	
@@ -1783,86 +1822,53 @@ audio : false };
 	
 		}
 	
-		function info(idd)
-		{
-			var player = document.getElementById("main");
-			var player1 = document.getElementById("main1");
-	
-			player.innerHTML = '<img src="" id="remoteVideo1_1'+idd+'"  class="rp img-responsive center-block"style="width: 20%;margin-top: 20%;width:160px;display:none"/><video  class="videoBackground "  id="remoteVideo1'+idd+'"  autoplay muted controls playsinline disablepictureinpicture ></video>';
-	
-			document.getElementById('remoteVideo1'+idd+'').muted = true;
+		function info(idd) {
+		var player = document.getElementById("main");
+		var player1 = document.getElementById("main1");
 
-			document.getElementById('remoteVideo1'+idd+'').volume = 0;
+		player.innerHTML = '<img src="" id="remoteVideo1_1' + idd + '"  class="rp img-responsive center-block"style="width: 20%;width:160px;display:none"/><video  class="videoBackground "  id="remoteVideo1' + idd + '"  autoplay muted="true" controls playsinline disablepictureinpicture ></video>';
 
-				
+
+
+
+	}
+	
+	
+	
+	
+	function removeRemoteVideo(streamId) {
+		var video = document.getElementById("remoteVideo" + streamId);
+		if (video != null) {
+			var player = document.getElementById("player" + streamId);
+			video.srcObject = null;
+			document.getElementById("tab1").removeChild(player);
+
 		}
-	
-		function info_1(idd)
-		{
-
-			var player = document.getElementById("main");
-			var player1 = document.getElementById("main1");
-	
-			player.innerHTML = '<img src="" id="remoteVideo1_2'+idd+'"  class="rp img-responsive center-block"style="width: 20%;margin-top: 20%;width:160px;display:none"/ ><video  class="videoBackground "  id="remoteVideo2'+idd+'"  autoplay muted controls playsinline disablepictureinpicture ></video>';
-	
-			document.getElementById('remoteVideo2'+idd+'').muted = true;
-
-			document.getElementById('remoteVideo2'+idd+'').volume = 0;
-
-				
-		}
-	
-	
-		function removeRemoteVideo(streamId) {
-			var video = document.getElementById("remoteVideo"+streamId);
-			if (video != null) {
-				var player = document.getElementById("player" + streamId);
-				video.srcObject = null;
-				document.getElementById("tab1").removeChild(player);
-	
-			}
 		if (autoRepublishIntervalJob != null) {
 			clearInterval(autoRepublishIntervalJob);
 			autoRepublishIntervalJob = null;
-		  }
-		  webRTCAdaptor.stop(streamId);
 		}
+		webRTCAdaptor.stop(streamId);
+	}
 
-		function removeRemoteVideo1(streamId) {
-			var video = document.getElementById("remoteVideo"+streamId);
-			if (video != null) {
-				var player = document.getElementById("player" + streamId);
-				video.srcObject = null;
-				document.getElementById("tab1").removeChild(player);
-	
-			}
-		if (autoRepublishIntervalJob != null) {
-		clearInterval(autoRepublishIntervalJob);
-			autoRepublishIntervalJob = null;
-		  }
-		  webRTCAdaptor.stop(streamId);
-		}
 	
 	
-	
-		function update_strem1(strm_id,n_id)
-		{
-			$.ajax({
-						url:"https://videoserver.apprikart.com/kia_vc_api/v1/update_stream_id/?stream_id="+strm_id+"&room="+roomNameBox+"&display_name="+display_name+"&user_type=customer",
-						type:"get",
-						data:"json",
-						success : function(data)
-						{
-	
-							if(data.status == "success")
-							{
-								
-							}
-	
-						},
-	
-					});
-		}
+	function update_strem1(strm_id) {
+		$.ajax({
+			url: "https://videoserver.apprikart.com/kia_vc_api/v1/update_stream_id/?stream_id=" + strm_id + "&room=" + roomNameBox + "&display_name=" + display_name + "&user_type=customer",
+			type: "get",
+			data: "json",
+			success: function (data) {
+
+				if (data.status == "success") {
+
+				}
+
+			},
+
+		});
+	}
+
 	
 	
 		
@@ -1940,490 +1946,463 @@ audio : false };
 					localVideoId : "localVideo",
 					isPlayMode : playOnly,
 					debug : true,
-					callback : (info, obj) => {
-						
-						if (info == "initialized") {
-	
-							if (publishImmediately) {
-								webRTCAdaptor.publish(streamId, token)
-							}
-	
-							joinRoom();
-						
-						
-	
-							if(playOnly){
-								isCameraOff = true;
-								handleCameraButtons();
-							}
-						}
-						else if(info == "pong")
-						{
-							$("#overlay").fadeOut(300);
-	
-						}
-						else if (info == "joinedTheRoom") {
-							var room = obj.ATTR_ROOM_NAME;
-							roomOfStream[obj.streamId] = room;
-							console.log("joined the room: "
-									+ roomOfStream[obj.streamId]);
-	
-									update_strem1(obj.streamId,localStorage.getItem("id"))
-							if (!executed1)
-							{
-							
-							playVideo_2(obj.streamId);
-							localStorage.setItem("strm_iod",obj.streamId
-							);
-							document.getElementById("localVideo").style.border = "2px solid skyblue";
-	
-							executed1 = true;
-	
-	
-							}
-	
-							publishStreamId = obj.streamId
-							$("#overlay").fadeOut(300);
-							if(playOnly) {
-	
-								
-								isCameraOff = true;
-								handleCameraButtons();
-							}
-							else {
-								publish(obj.streamId, token);
-							}
-							
-							if (obj.streams != null) {
-								obj.streams.forEach(function(item) {
-									console.log("Stream joined with ID: "+item);
-									webRTCAdaptor.play(item, token,
-									roomNameBox);
-								});
-								streamsList = obj.streams;
-							}
-							roomTimerId = setInterval(() => {			
-								webRTCAdaptor.getRoomInfo(roomNameBox, publishStreamId);
-							}, 5000);
-						}
-						else if (info == "play_finished")
-						{
+					callback: (info, obj) => {
 
-						}
-						else if (info == "newStreamAvailable") 
-						{
+if (info == "initialized") {
 
-							
+	if (publishImmediately) {
+		webRTCAdaptor.publish(streamId, token)
+	}
 
-							console.log(isCameraOff +"-"+ isMicMuted)
-
-
-							var inc = obj.streamId;							
-
-
-							localStorage.setItem("strem_id",obj.streamId)
-							
-
-							$(".test1").removeClass("testing");
-
-							$("#remoteVideo"+localStorage.getItem("length_obj")).addClass("testing");
-
-							playVideo(obj);
-	
-							var ttt = document.getElementById("remoteVideo"+obj.streamId);
-							document.getElementById("localVideo").style.border = "none";
-	
-							ttt.addEventListener("click", function() {
-	
-	
-							playVideo1(obj);
-
-							$(".test1").removeClass("testing");
-
-							$("#remoteVideo"+obj.streamId).addClass("testing");
-	
-							document.getElementById("localVideo").style.border = "none";
-	
-							}, false);
-	
-							var loca_v = document.getElementById('localVideo');
-	
-							loca_v.addEventListener("click", function() {
-	
-							playVideo_2(localStorage.getItem("strm_iod"));
-
-							$(".test1").removeClass("testing");
-
-	
-							document.getElementById("localVideo").style.border = "2px solid skyblue";
-							
-							}, false);
-						
-						$.ajax({
-						url:"https://videoserver.apprikart.com/kia_vc_api/v1/get_display_name/?stream_id="+obj.streamId+"&room="+localStorage.getItem("room")+"",
-						type:"get",
-						data:"json",
-						success : function(data)
-						{
-	
-							if(document.getElementById("remoteVideoss"+obj.streamId) == "null")
-							{
-	
-							}
-							else
-							{
-								document.getElementById("remoteVideoss"+obj.streamId).innerHTML = data.display_name;
-
-								// if(data.display_name == "KEC")
-								// {
-								// 	playVideo1(obj);
-
-								// }
-	
-							}
-			
-	
-						}
-						});
-	
-						} 
-						else if (info == "publish_started") {
-	
-							console.debug("publish started to room: "+ roomOfStream[obj.streamId]);
-							startAnimation();
-							webRTCAdaptor.getStreamInfo(streamId); 
-							webRTCAdaptor.enableStats(obj.streamId);
-						if (autoRepublishEnabled && autoRepublishIntervalJob == null) 
-							{
-								autoRepublishIntervalJob = setInterval(() => {
-									checkAndRepublishIfRequired();
-								}, 3000);
-							}
-							webRTCAdaptor.enableStats(obj.streamId);
-						} 
-						else if (info == "play_started") {
-			
-							webRTCAdaptor.getStreamInfo(streamId); 
-							webRTCAdaptor.enableStats(obj.streamId);
-
-							
-
-						}
-						else if (info == "publish_finished") {
-							console.debug("publish finished");
-	
-						
-						} 
-						else if (info == "screen_share_stopped") {
-							console.log("screen share stopped");
-						}
-						else if (info == "browser_screen_share_supported") {
-							screen_share_checkbox.disabled = false;
-							console.log("browser screen share supported");
-							browser_screen_share_doesnt_support.style.display = "none";
-						} 
-						else if (info == "refreshConnection") {
-				  				checkAndRepublishIfRequired();
-							} 
-						else if (info == "leavedFromRoom") 
-						{
-
-						var room = obj.ATTR_ROOM_NAME;
-						console.debug("leaved from the room:" + room);
-						if (roomTimerId != null)
-						{
-							clearInterval(roomTimerId);
-						}
-
-						join_publish_button.disabled = false;
-						stop_publish_button.disabled = true;
-						
-						if (streamsList != null) {
-							streamsList.forEach(function(item) {
-								removeRemoteVideo(item);
-							});
-						}
-						streamsList = new Array();
-	
-						} 
-						else if (info == "closed") {
-							  if (typeof obj != "undefined") {
-								console.log("Connecton closed: " + JSON.stringify(obj));
-
-				  			}
-						} 
-						else if (info == "play_finished") 
-						{
-						
-
-	
-							console.log("play_finished");
-							removeRemoteVideo(obj.streamId);
-							var player = document.getElementById("main");		
-							player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;margin-top: 10%;width:160px">';
-			
-	
-						} 
-						else if (info == "streamInformation") {
-							streamInformation(obj);
-
-						
-						} 
-						else if (info == "roomInformation") {
-
-							var obj_length = (obj.streams)
-	
-							localStorage.setItem("length_obj",obj_length[obj_length.length - 1]);
-
-							// if(obj_length <1)
-							// {
-							// 	playVideo_2(obj.streamId);
-
-							// }
-
-							//Checks if any new stream has added, if yes, plays.
-
-						for(let str of obj.streams){
-							if(!streamsList.includes(str)){
-								webRTCAdaptor.play(str, token,
-										roomNameBox.value);
-							}
-						}
-						// Checks if any stream has been removed, if yes, removes the view and stops webrtc connection.
-						for(let str of streamsList){
-							if(!obj.streams.includes(str)){
-								removeRemoteVideo(str);
-							}
-						}
-						//Lastly updates the current streamlist with the fetched one.
-						streamsList=obj.streams;
-						}
-						else if (info == "data_channel_opened") {
-							console.log("Data Channel open for stream id", obj );
-							isDataChannelOpen = true;
-							if(isCameraOff == true)
-							{
-								
-								
-								sendNotificationEvent("CAM_TURNED_OFF");
-
-							}
-						     if(isMicMuted == true)
-							{
-								muteLocalMic();
-								sendNotificationEvent("MIC_MUTED");
-
-
-							}
-
-							if(isCameraOff == false)
-							{
-								sendNotificationEvent("CAM_TURNED_ON");
-
-
-							}
-
-							if(isMicMuted == false)
-							{
-								sendNotificationEvent("MIC_UNMUTED");
-
-							}
-						} 
-						else if (info == "data_channel_closed") {
-							console.log("Data Channel closed for stream id", obj );
-							
-							console.log(obj +"-"+publishStreamId)
-							isDataChannelOpen = false;
-							
-						}
-						else if (info == "ice_connection_state_changed") {
-						console.log("iceConnectionState Changed: ",JSON.stringify(obj));
-						var status = JSON.stringify(obj);
-
-						if(status.state == "disconnected")
-						{
-
-											
-						}
-
-						}
-						else if (info == "updated_stats") 
-						{
+	joinRoom();
 
 
 
-							var mic_off = localStorage.getItem("mic_off");
-							console.log(mic_off)
+	if (playOnly) {
+		isCameraOff = true;
+		handleCameraButtons();
+	}
+}
+else if (info == "pong") {
+	$("#overlay").fadeOut(300);
+
+}
+else if (info == "joinedTheRoom") {
+	var room = obj.ATTR_ROOM_NAME;
+	roomOfStream[obj.streamId] = room;
+	console.log("joined the room: "
+		+ roomOfStream[obj.streamId]);
 
 
-							//var audioLevel = obj.audioLevel * 1000;
+	publishStreamId = obj.streamId
+	update_strem1(publishStreamId)
 
-							if(mic_off == "mic_on")
-							{
+	$("#overlay").fadeOut(300);
+	if (playOnly) {
 
-							
-							if (obj.audioLevel * 1000 > 5)
-							{
-								console.log(obj.audioLevel * 1000 + "-" +obj.streamId)
 
-								document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_1.png";
-							}
-							 if (obj.audioLevel * 1000 > 10)
-							{
-								console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+		isCameraOff = true;
+		handleCameraButtons();
+	}
+	else {
 
-								document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_2.png";
-							}
-							 if (obj.audioLevel * 1000 > 15)
-							{
-								console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
 
-								document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_3.png";
-							}
-							 if (obj.audioLevel * 1000 > 30)
-							{
-								console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+		publish(obj.streamId, token);
+	}
 
-								document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_4.png";
-							}
-							 if (obj.audioLevel * 1000 > 50)
-							{
-								console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	if (obj.streams != null) {
+		obj.streams.forEach(function (item) {
+			console.log("Stream joined with ID: " + item);
+			webRTCAdaptor.play(item, token,
+				roomNameBox);
+		});
+		streamsList = obj.streams;
+	}
+	roomTimerId = setInterval(() => {
+		webRTCAdaptor.getRoomInfo(roomNameBox, publishStreamId);
+	}, 5000);
+}
+else if (info == "play_finished") {
 
-								document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_5.png";
-							}
-							 if (obj.audioLevel * 1000 > 80)
-							{
-								console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+}
+else if (info == "newStreamAvailable") {
 
-								document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_6.png";
-							}
-							 if (obj.audioLevel * 1000 > 100)
-							{
-								console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	playVideo(obj);
 
-								document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_7.png";
-							}
-							if (obj.audioLevel * 1000 > 500)
-							{
-								console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	$(".test1").removeClass("testing");
 
-								document.getElementById('enable_audio1_1'+obj.streamId).src = "images/Speaking_7.png";
-							}
-							 if (obj.audioLevel * 10 > 200 )
-							{
-								console.log(obj.audioLevel * 1000+ "-" +obj.streamId)
+	//$("#remoteVideo" + localStorage.getItem("length_obj")).addClass("testing");
 
-							}
-							else 
-							{
+	var ttt = document.getElementById("remoteVideo" + obj.streamId);
+	document.getElementById("localVideo").style.border = "none";
 
-								console.log(obj.audioLevel * 1000 + "-" +obj.streamId)
-								 
-						    }
-								}
-							
-								
-						}
-						else if(info == "data_received") {
-		
+	ttt.addEventListener("click", function () {
+
+		$(".test1").removeClass("testing");
+		playVideo1(obj);
+
+		$("#remoteVideo" + obj.streamId).addClass("testing");
+
+		document.getElementById("localVideo").style.border = "none";
+
+	}, false);
+
+	$.ajax({
+		url: "https://videoserver.apprikart.com/kia_vc_api/v1/get_display_name/?stream_id=" + obj.streamId + "&room=" + localStorage.getItem("room") + "&user_type=customer",
+		type: "get",
+		data: "json",
+		success: function (data) {
+
+			if (document.getElementById("remoteVideoss" + obj.streamId) == "null") {
+
+			}
+			else {
+				document.getElementById("remoteVideoss" + obj.streamId).innerHTML = data.display_name;
+
+				if (data.user_type == "kec") {
+					if (data.stream_id == obj.streamId) {
+						playVideo1(obj);
+						$("#remoteVideo" + obj.streamId).addClass("testing");
+						localStorage.setItem("kec_ids", obj.streamId);
+						localStorage.setItem("kec_ids1", JSON.stringify(obj))
+
+					}
+
+				}
+
+			}
+
+		}
+	});
+
+}
+else if (info == "publish_started") {
+
+	console.debug("publish started to room: " + roomOfStream[obj.streamId]);
+	startAnimation();
+	webRTCAdaptor.getStreamInfo(streamId);
+	webRTCAdaptor.enableStats(obj.streamId);
+	if (autoRepublishEnabled && autoRepublishIntervalJob == null) {
+		autoRepublishIntervalJob = setInterval(() => {
+			checkAndRepublishIfRequired();
+		}, 3000);
+	}
+	webRTCAdaptor.enableStats(obj.streamId);
+}
+else if (info == "play_started") {
+
+	webRTCAdaptor.getStreamInfo(streamId);
+	webRTCAdaptor.enableStats(obj.streamId);
+
+
+
+}
+else if (info == "publish_finished") {
+	console.debug("publish finished");
+
+
+}
+else if (info == "screen_share_stopped") {
+	console.log("screen share stopped");
+}
+else if (info == "browser_screen_share_supported") {
+	screen_share_checkbox.disabled = false;
+	console.log("browser screen share supported");
+	browser_screen_share_doesnt_support.style.display = "none";
+}
+else if (info == "refreshConnection") {
+	checkAndRepublishIfRequired();
+}
+else if (info == "leavedFromRoom") {
+
+	var room = obj.ATTR_ROOM_NAME;
+	console.debug("leaved from the room:" + room);
+	if (roomTimerId != null) {
+		clearInterval(roomTimerId);
+	}
+
+	if (streamsList != null) {
+		streamsList.forEach(function (item) {
+		if(localStorage.getItem("kec_ids") == item)
+		{
+		var player = document.getElementById("main");
+		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;">Waiting for the Host To Join Conference</h3>';
+
+		}
+		else if(item != localStorage.getItem("kec_ids"))
+		{
+			var player = document.getElementById("main");
+		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;"></h3>';
+
+		}
+		removeRemoteVideo(item);
+		});
+	}
+	streamsList = new Array();
+
+}
+else if (info == "closed") {
+	if (typeof obj != "undefined") {
+		console.log("Connecton closed: " + JSON.stringify(obj));
+
+	}
+}
+else if (info == "play_finished") {
+
+
+
+	console.log("play_finished");
+	removeRemoteVideo(obj.streamId);
+	var player = document.getElementById("main");
+	player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px">';
+
+
+}
+else if (info == "streamInformation") {
+	streamInformation(obj);
+
+
+}
+else if (info == "roomInformation") 
+{
+
+
+	var obj_length = (obj.streams);
+
+
+	if (obj_length.length < 1) {
+		var player = document.getElementById("main");
+		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;">Waiting for the Host To Join Conference</h3>';
+
+	}
+
+	localStorage.setItem("length_obj", obj_length[obj_length.length - 1]);
+
+
+
+	for (let str of obj.streams) {
+		if (!streamsList.includes(str)) {
+			webRTCAdaptor.play(str, token,
+				roomNameBox.value);
+		}
+	}
+	// Checks if any stream has been removed, if yes, removes the view and stops webrtc connection.
+	for (let str of streamsList) {
+		if (!obj.streams.includes(str)) {
+
+		if(localStorage.getItem("kec_ids") == str)
+		{
+		var player = document.getElementById("main");
+		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;">Waiting for the Host To Join Conference</h3>';
+
+		}
+		else if(item != localStorage.getItem("kec_ids"))
+		{
+		var player = document.getElementById("main");
+		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;"></h3>';
+
+		}
+			removeRemoteVideo(str);
+		}
+	}
+	//Lastly updates the current streamlist with the fetched one.
+	streamsList = obj.streams;
+}
+else if (info == "data_channel_opened") {
+	console.log("Data Channel open for stream id", obj);
+	isDataChannelOpen = true;
+	if (isCameraOff == true) {
+
+
+		sendNotificationEvent("CAM_TURNED_OFF");
+
+	}
+	if (isMicMuted == true) {
+		muteLocalMic();
+		sendNotificationEvent("MIC_MUTED");
+
+
+	}
+
+	if (isCameraOff == false) {
+		sendNotificationEvent("CAM_TURNED_ON");
+
+
+	}
+
+	if (isMicMuted == false) {
+		sendNotificationEvent("MIC_UNMUTED");
+
+	}
+}
+else if (info == "data_channel_closed") {
+	console.log("Data Channel closed for stream id", obj);
+
+	console.log(obj + "-" + publishStreamId)
+	isDataChannelOpen = false;
+	removeRemoteVideo(obj);
+
+
+}
+else if (info == "ice_connection_state_changed") {
+	console.log("iceConnectionState Changed: ", JSON.stringify(obj));
+	var status = JSON.stringify(obj);
+
+	if (status.state == "disconnected") {
+
+
+	}
+
+}
+else if (info == "updated_stats") {
+
+
+	console.log("Average outgoing bitrate " + obj.averageOutgoingBitrate, obj.streamId + " kbits/sec"
+		+ " Current outgoing bitrate: " + obj.currentOutgoingBitrate, obj.streamId + " kbits/sec"
+		+ " video source width: " + obj.resWidth + " video source height: " + obj.resHeight
+		+ "frame width: " + obj.frameWidth + " frame height: " + obj.frameHeight
+		+ " video packetLost: " + obj.videoPacketsLost + " audio packetsLost: " + obj.audioPacketsLost
+		+ " video RTT: " + obj.videoRoundTripTime + " audio RTT: " + obj.audioRoundTripTime
+		+ " video jitter: " + obj.videoJitter + " audio jitter: " + obj.audioJitter);
+
+
+
+	var mic_off = localStorage.getItem("mic_off");
+	console.log(mic_off)
+
+
+	//var audioLevel = obj.audioLevel * 1000;
+
+	if (mic_off == "mic_on") {
+
+
+		if (obj.audioLevel * 1000 > 5) {
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+			document.getElementById('enable_audio1_1' + obj.streamId).src = "images/Speaking_1.png";
+		}
+		if (obj.audioLevel * 1000 > 10) {
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+			document.getElementById('enable_audio1_1' + obj.streamId).src = "images/Speaking_2.png";
+		}
+		if (obj.audioLevel * 1000 > 15) {
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+			document.getElementById('enable_audio1_1' + obj.streamId).src = "images/Speaking_3.png";
+		}
+		if (obj.audioLevel * 1000 > 30) {
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+			document.getElementById('enable_audio1_1' + obj.streamId).src = "images/Speaking_4.png";
+		}
+		if (obj.audioLevel * 1000 > 50) {
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+			document.getElementById('enable_audio1_1' + obj.streamId).src = "images/Speaking_5.png";
+		}
+		if (obj.audioLevel * 1000 > 80) {
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+			document.getElementById('enable_audio1_1' + obj.streamId).src = "images/Speaking_6.png";
+		}
+		if (obj.audioLevel * 1000 > 100) {
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+			document.getElementById('enable_audio1_1' + obj.streamId).src = "images/Speaking_7.png";
+		}
+		if (obj.audioLevel * 1000 > 500) {
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+			document.getElementById('enable_audio1_1' + obj.streamId).src = "images/Speaking_7.png";
+		}
+		if (obj.audioLevel * 10 > 200) {
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+		}
+		else {
+
+			console.log(obj.audioLevel * 1000 + "-" + obj.streamId)
+
+		}
+	}
+
+
+}
+else if (info == "data_received") {
+
 
 	var objDiv = document.getElementById("tab2");
 	objDiv.scrollTop = objDiv.scrollHeight;
-	
+
 	var data = obj.event.data;
 
 
-	console.log("datareceived"+obj.event)
+	console.log("datareceived" + obj.event)
 
-   var receiveChannel = obj.event.currentTarget;
+	var receiveChannel = obj.event.currentTarget;
 
 
-    receivedSize = 0;
+	receivedSize = 0;
 
-	var datas_event1  = (JSON.parse(event.data))
+	var datas_event1 = (JSON.parse(event.data))
 
-    if (datas_event1.eventType == "TEXT_MESSAGE")
-	{
+	if (datas_event1.eventType == "TEXT_MESSAGE") {
 		handleTextMessage(data);
-		document.getElementById('tab_text').innerHTML = "Chat"+'('+coun_message+++')';
+		document.getElementById('tab_text').innerHTML = "Chat" + '(' + coun_message++ + ')';
 
 
-	
+
 	}
-	else if (datas_event1.eventType == "FILE_MESSAGE")
-	{
-	
+	else if (datas_event1.eventType == "FILE_MESSAGE") {
+
 		handleImageData(data);
-		document.getElementById('tab_text').innerHTML = "Chat"+"("+coun_message+++")";
+		document.getElementById('tab_text').innerHTML = "Chat" + "(" + coun_message++ + ")";
 
-	
+
 	}
-	else
-	{
+	else {
 		handleNotificationEvent(obj);
 
 	}
-	
-	
-				   
-						
-	
-							}	
-					},
-					callbackError : function(error, message) {
-						//some of the possible errors, NotFoundError, SecurityError,PermissionDeniedError
-	
-						if(error.indexOf("publishTimeoutError") != -1 && roomTimerId != null){
-							clearInterval(roomTimerId);
-						}
-	
-						console.log("Error: " + JSON.stringify(error));
-						var errorMessage = JSON.stringify(error);
-						if (typeof message != "undefined") {
-							errorMessage = message;
-						}
-						var errorMessage = JSON.stringify(error);
-						if (error.indexOf("NotFoundError") != -1) {
-							errorMessage = "Camera or Mic are not found or not allowed in your device.";
-						} else if (error.indexOf("NotReadableError") != -1
-								|| error.indexOf("TrackStartError") != -1) {
-							errorMessage = "Camera or Mic is being used by some other process that does not not allow these devices to be read.";
-						} else if (error.indexOf("OverconstrainedError") != -1
-								|| error.indexOf("ConstraintNotSatisfiedError") != -1) {
-							errorMessage = "There is no device found that fits your video and audio constraints. You may change video and audio constraints."
-						} else if (error.indexOf("NotAllowedError") != -1
-								|| error.indexOf("PermissionDeniedError") != -1) {
-							errorMessage = "You are not allowed to access camera and mic.";
-						} else if (error.indexOf("TypeError") != -1) {
-							errorMessage = "Video/Audio is required.";
-						} else if (error.indexOf("UnsecureContext") != -1) {
-							errorMessage = "Fatal Error: Browser cannot access camera and mic because of unsecure context. Please install SSL and access via https";
-						} else if (error.indexOf("WebSocketNotSupported") != -1) {
-							errorMessage = "Fatal Error: WebSocket not supported in this browser";
-						} else if (error.indexOf("no_stream_exist") != -1) {
-							//TODO: removeRemoteVideo(error.streamId);
-						} else if(error.indexOf("data_channel_error") != -1) {
-							errorMessage = "There was a error during data channel communication";
-						} else if (error.indexOf("ScreenSharePermissionDenied") != -1) {
-							//camera_checkbox.checked = true;
-							document.getElementById('camera_checkbox').checked = true;
-						} 
-	
-						//alert(errorMessage);
-	
-					}
-				});
-	
-			}
-	
-	
-			initWebRTCAdaptor(false, autoRepublishEnabled);
-	
 
-	
-	
-	
+
+
+
+
+}
+},
+callbackError: function (error, message) {
+//some of the possible errors, NotFoundError, SecurityError,PermissionDeniedError
+
+if (error.indexOf("publishTimeoutError") != -1 && roomTimerId != null) {
+	clearInterval(roomTimerId);
+}
+
+console.log("Error: " + JSON.stringify(error));
+var errorMessage = JSON.stringify(error);
+if (typeof message != "undefined") {
+	errorMessage = message;
+}
+var errorMessage = JSON.stringify(error);
+if (error.indexOf("NotFoundError") != -1) {
+	errorMessage = "Camera or Mic are not found or not allowed in your device.";
+} else if (error.indexOf("NotReadableError") != -1
+	|| error.indexOf("TrackStartError") != -1) {
+	errorMessage = "Camera or Mic is being used by some other process that does not not allow these devices to be read.";
+} else if (error.indexOf("OverconstrainedError") != -1
+	|| error.indexOf("ConstraintNotSatisfiedError") != -1) {
+	errorMessage = "There is no device found that fits your video and audio constraints. You may change video and audio constraints."
+} else if (error.indexOf("NotAllowedError") != -1
+	|| error.indexOf("PermissionDeniedError") != -1) {
+	errorMessage = "You are not allowed to access camera and mic.";
+} else if (error.indexOf("TypeError") != -1) {
+	errorMessage = "Video/Audio is required.";
+} else if (error.indexOf("UnsecureContext") != -1) {
+	errorMessage = "Fatal Error: Browser cannot access camera and mic because of unsecure context. Please install SSL and access via https";
+} else if (error.indexOf("WebSocketNotSupported") != -1) {
+	errorMessage = "Fatal Error: WebSocket not supported in this browser";
+} else if (error.indexOf("no_stream_exist") != -1) {
+} else if (error.indexOf("data_channel_error") != -1) {
+	errorMessage = "There was a error during data channel communication";
+} else if (error.indexOf("ScreenSharePermissionDenied") != -1) {
+	//camera_checkbox.checked = true;
+	document.getElementById('camera_checkbox').checked = true;
+}
+
+console.log(errorMessage);
+
+}
+});
+
+}
+
+
+initWebRTCAdaptor(false, autoRepublishEnabled);
+
+
+
+
 	
 	
 	</script>
