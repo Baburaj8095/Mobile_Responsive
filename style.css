@@ -438,11 +438,11 @@
      @media screen and (max-width: 1500px) and (max-height: 400px)
      {
         #tab1 {
-            height: 150px;
+            height: 160px;
         }
 
         #tab2 {
-            height: 110px;
+            height: 130px;
         }
 
         .test_for_demo{
@@ -515,11 +515,11 @@
      @media screen and (max-width: 1500px) and (max-height: 350px)
      {
         #tab1 {
-            height: 130px;
+            height: 160px;
         }
 
         #tab2 {
-            height: 100px;
+            height: 130px;
         }
 
         .test_for_demo{
@@ -624,11 +624,11 @@
     }
 
     #tab1 {
-        height: 180px;
+        height: 220px;
     }
 
     #tab2 {
-        height: 120px;
+        height: 150px;
     }
 
     .card.card-bottom {
@@ -737,11 +737,11 @@
 @media only screen and (min-width: 360px) and (max-width: 767px) and (max-height: 400px)
 {
     #tab1 {
-        height: 150px;
+        height: 190px;
     }
 
     #tab2 {
-        height: 100px;
+        height: 140px;
     }
 
     .test_for_demo{
