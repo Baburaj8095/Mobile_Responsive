@@ -239,12 +239,44 @@ and (max-device-width: 900px) and (max-height: 390px)
 	.admg{
 	  margin-left:-60px !important;
 }
-    #display_name
-    {
-        margin-left: 63px !important;
-        font-size: 10px;
-        margin-right: 60px !important;
+      
+.card.user_row
+{
+    border: none !important;
+    box-shadow: none !important;
+}
 
+#enable_video, #disable_video,.extra1
+{
+    display: none !important;
+}
+
+#flx_pop
+{
+    display: inline-block !important;
+    float: right;
+}
+
+.extra2
+{
+    margin-right: 0px;
+    margin-top: 0px i !important;
+}
+#display_name
+{
+    font-size: 15px;
+    color: white !important;
+    font-weight: bolder;
+    float: right;
+    width: 0% !important;
+    margin-right: 60px !important;
+}  
+
+    .video-overlay
+    {
+        font-size: 15px;
+        color: white !important;
+        margin-right: 30px !important;
 
     }
     .ricon{
@@ -533,12 +565,44 @@ body {
 	.admg{
 	  margin-left:-60px !important;
 }
-    #display_name
-    {
-        margin-left: 63px !important;
-        font-size: 10px;
-        margin-right: 60px !important;
+      
+.card.user_row
+{
+    border: none !important;
+    box-shadow: none !important;
+}
 
+#enable_video, #disable_video,.extra1
+{
+    display: none !important;
+}
+
+#flx_pop
+{
+    display: inline-block !important;
+    float: right;
+}
+
+.extra2
+{
+    margin-right: 0px;
+    margin-top: 0px i !important;
+}
+#display_name
+{
+    font-size: 15px;
+    color: white !important;
+    font-weight: bolder;
+    float: right;
+    width: 0% !important;
+    margin-right: 60px !important;
+}  
+
+    .video-overlay
+    {
+        font-size: 15px;
+        color: white !important;
+        margin-right: 30px !important;
 
     }
     .ricon{
@@ -722,14 +786,46 @@ textarea {
 	    .admg{
 	  margin-left:-60px !important;
 }
-        #display_name
-        {
-            margin-left: 63px !important;
-            font-size: 10px;
-            margin-right: 60px !important;
+           
+.card.user_row
+{
+    border: none !important;
+    box-shadow: none !important;
+}
 
-    
-        }
+#enable_video, #disable_video,.extra1
+{
+    display: none !important;
+}
+
+#flx_pop
+{
+    display: inline-block !important;
+    float: right;
+}
+
+.extra2
+{
+    margin-right: 0px;
+    margin-top: 0px i !important;
+}
+#display_name
+{
+    font-size: 15px;
+    color: white !important;
+    font-weight: bolder;
+    float: right;
+    width: 0% !important;
+    margin-right: 60px !important;
+}  
+
+    .video-overlay
+    {
+        font-size: 15px;
+        color: white !important;
+        margin-right: 30px !important;
+
+    }
         .ricon{
             height:	17px !important;
             width:17px !important;
@@ -909,14 +1005,46 @@ textarea {
 	    .admg{
 	  margin-left:-60px !important;
 }
-        #display_name
-        {
-            margin-left: 63px !important;
-            font-size: 10px;
-            margin-right: 60px !important;
+          
+.card.user_row
+{
+    border: none !important;
+    box-shadow: none !important;
+}
 
-    
-        }
+#enable_video, #disable_video,.extra1
+{
+    display: none !important;
+}
+
+#flx_pop
+{
+    display: inline-block !important;
+    float: right;
+}
+
+.extra2
+{
+    margin-right: 0px;
+    margin-top: 0px i !important;
+}
+#display_name
+{
+    font-size: 15px;
+    color: white !important;
+    font-weight: bolder;
+    float: right;
+    width: 0% !important;
+    margin-right: 60px !important;
+}  
+
+    .video-overlay
+    {
+        font-size: 15px;
+        color: white !important;
+        margin-right: 30px !important;
+
+    }
         .ricon{
             height:	17px !important;
             width:17px !important;
@@ -1099,12 +1227,44 @@ textarea {
 	.admg{
 	  margin-left:-60px !important;
 }
-    #display_name
-    {
-        margin-left: 63px !important;
-        font-size: 10px;
-        margin-right: 60px !important;
+      
+.card.user_row
+{
+    border: none !important;
+    box-shadow: none !important;
+}
 
+#enable_video, #disable_video,.extra1
+{
+    display: none !important;
+}
+
+#flx_pop
+{
+    display: inline-block !important;
+    float: right;
+}
+
+.extra2
+{
+    margin-right: 0px;
+    margin-top: 0px i !important;
+}
+#display_name
+{
+    font-size: 15px;
+    color: white !important;
+    font-weight: bolder;
+    float: right;
+    width: 0% !important;
+    margin-right: 60px !important;
+}  
+
+    .video-overlay
+    {
+        font-size: 15px;
+        color: white !important;
+        margin-right: 30px !important;
 
     }
     .ricon{
