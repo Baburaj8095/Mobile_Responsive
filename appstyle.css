@@ -36,7 +36,7 @@ and (max-device-width: 900px) and (max-height: 450px)
 
     .extra2
     {
-        margin-right: 40px;
+        margin-right: 70px;
         margin-top: 0px i !important;
     }
 
@@ -239,6 +239,12 @@ and (max-device-width: 900px) and (max-height: 390px)
 	.admg{
 	  margin-left:-60px !important;
 }
+	
+	 .extra2
+    {
+        margin-right: 40px;
+        margin-top: 0px i !important;
+    }
       
 .card.user_row
 {
@@ -565,6 +571,12 @@ body {
 	.admg{
 	  margin-left:-60px !important;
 }
+	
+	 .extra2
+    {
+        margin-right: 80px;
+        margin-top: 0px i !important;
+    }
       
 .card.user_row
 {
@@ -792,6 +804,12 @@ textarea {
     border: none !important;
     box-shadow: none !important;
 }
+	    
+	     .extra2
+    {
+        margin-right: 70px;
+        margin-top: 0px i !important;
+    }
 
 #enable_video, #disable_video,.extra1
 {
@@ -1005,6 +1023,12 @@ textarea {
 	    .admg{
 	  margin-left:-60px !important;
 }
+	    
+	     .extra2
+    {
+        margin-right: 40px;
+        margin-top: 0px i !important;
+    }
           
 .card.user_row
 {
@@ -1227,6 +1251,12 @@ textarea {
 	.admg{
 	  margin-left:-60px !important;
 }
+	
+	 .extra2
+    {
+        margin-right: 90px;
+        margin-top: 0px i !important;
+    }
       
 .card.user_row
 {
