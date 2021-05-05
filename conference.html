@@ -717,7 +717,7 @@
 				<span class="main" id="main">
 					<img src="images/Group 59.png" id="rp" class="rp img-responsive center-block"
 						style="width: 20%;width:160px">
-						<h3 style="text-align: center;">Waiting for the Host To Join Conference</h3>
+						<h3 style="text-align: center;">Waiting for KEC To Join Conference</h3>
 
 				</span>
 			</div>
@@ -782,11 +782,11 @@
 														<div class="col-xs-3 col-sm-3 col-md-3">
 															<ul class="admg"
 																style="padding-top:60px;list-style-type: none !important;display:inline-flex;margin-left:0px;margin-top:14px">
-																<li id="enable_video"><img src="assets/Group 69.png"
-																		style="height:17px;margin-top:5px" alt=""></li>
-																<li id="disable_video" style="display: none;"><img
+																<li id="enable_video" style="margin-right:05px;"><img src="assets/Group 69.png"
+																		style="height:17px;margin-top:5px;" alt=""></li>
+																<li id="disable_video" style="display: none;margin-right:05px"><img
 																		src="assets/Group 68.png"
-																		style="height:17px;margin-top:5px" alt=""></li>
+																		style="height:17px;margin-top:5px;" alt=""></li>
 
 																<li id="enable_audio"><img src="assets/Group 73.png"
 																		style="height:17px;margin-top:4px" alt=""></li>
@@ -1276,7 +1276,7 @@ formData.append('user_type', "customer");
 		
 	
 	
-			document.getElementById("display_name").style.marginRight= "70px";
+			document.getElementById("display_name").style.marginRight= "90px";
 			document.getElementById("localVideo").style.marginLeft = "-22px";
 	
 
@@ -1429,6 +1429,7 @@ formData.append('user_type', "customer");
 			document.getElementById("enable_video1"+eventStreamId).style.display = "none";
 			document.getElementById("disable_video1"+eventStreamId).style.display = "revert";
 	
+			document.getElementById("remoteVideoss"+eventStreamId).style.marginRight= "0px";
 			document.getElementById("remoteVideoss"+eventStreamId).style.marginTop= "10px";
 	
 			document.getElementById("mute"+eventStreamId).style.display = "block";
@@ -1560,6 +1561,7 @@ formData.append('user_type', "customer");
 			document.getElementById("enable_video1"+eventStreamId).style.display = "none";
 			document.getElementById("disable_video1"+eventStreamId).style.display = "revert";
 	
+			document.getElementById("remoteVideoss"+eventStreamId).style.marginRight= "0px";
 			document.getElementById("remoteVideoss"+eventStreamId).style.marginTop= "10px";
 	
 			document.getElementById("mute"+eventStreamId).style.display = "block";
@@ -1797,7 +1799,7 @@ formData.append('user_type', "customer");
 			var player = document.createElement("div");
 			player.className = "sidebar";
 			player.id = "player"+streamId;
-			player.innerHTML = '<div class="card user_row " id="abc'+streamId+'" ><div class="container" style="overflow:auto;white-space:nowrap"><div class="row"><div class="col-xs-3 col-sm-3 col-md-3"><img src="" id="mute'+streamId+'"/><video  id="remoteVideo'+streamId+'" class="test1" autoplay playsinline style="width:119px;position:absolute;margin-left:-18px;margin-top:8px;border: 1px solid grey;height:90px;" ></video></div><div class="col-xs-1 col-sm-1 col-md-1"></div><div class="col-xs-3 col-sm-3 col-md-3" style="margin-top:4px;"><div style="margin-left:25px;margin-top:10px;float:right;margin-right:15px" class="video-overlay" id="remoteVideoss'+streamId+'"></div></div><div class="col-xs-3 col-sm-3 col-md-3"><ul id="flx_pop" style="margin-top:73px;list-style-type:none !important;display:inline-flex"><li id="enable_video1'+streamId+'" class="extra1"><img src="assets/Group 69.png" style="height:17px;" alt=""></li><li id="disable_video1'+streamId+'" class="extra1" style="display: none;"><img src="assets/Group 68.png" style="height:17px;" alt=""></li><li id="enable_audio1'+streamId+'" class="extra2"><img src="assets/Group 73.png" id="enable_audio1_1'+streamId+'"  style="height:17px;" alt=""></li><li id="disable_audio1'+streamId+'" class="extra2" style="display: none;"><img src="assets/Icon feather-mic-offf.png" style="height:17px;" alt=""></li></ul> <ul class="animation_s" id="audio_level_container'+streamId+'" class="extra2" style="visibility:hidden"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li>  </ul> </></div></div></div></div>';
+			player.innerHTML = '<div class="card user_row " id="abc'+streamId+'" ><div class="container" style="overflow:auto;white-space:nowrap"><div class="row"><div class="col-xs-3 col-sm-3 col-md-3"><img src="" id="mute'+streamId+'"/><video  id="remoteVideo'+streamId+'" class="test1" autoplay playsinline style="width:119px;position:absolute;margin-left:-8px;margin-top:8px;border: 1px solid grey;height:90px;" ></video></div><div class="col-xs-1 col-sm-1 col-md-1"></div><div class="col-xs-3 col-sm-3 col-md-3" style="margin-top:4px;"><div style="margin-left:25px;margin-top:10px;" class="video-overlay" id="remoteVideoss'+streamId+'"></div></div><div class="col-xs-3 col-sm-3 col-md-3"><ul id="flx_pop" style="margin-top:73px;list-style-type:none !important;display:inline-flex"><li id="enable_video1'+streamId+'" class="extra1" style="margin-right:05px"><img src="assets/Group 69.png" style="height:17px;" alt=""></li><li id="disable_video1'+streamId+'" class="extra1" style="display: none;margin-right:05px" style=""><img src="assets/Group 68.png" style="height:17px;" alt=""></li><li id="enable_audio1'+streamId+'" class="extra2"><img src="assets/Group 73.png" id="enable_audio1_1'+streamId+'"  style="height:17px;" alt=""></li><li id="disable_audio1'+streamId+'" class="extra2" style="display: none;"><img src="assets/Icon feather-mic-offf.png" style="height:17px;" alt=""></li></ul> <ul class="animation_s" id="audio_level_container'+streamId+'" class="extra2" style="visibility:hidden"> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li>  </ul> </></div></div></div></div>';
 	
 			document.getElementById("tab1").appendChild(player);
 	
@@ -2061,7 +2063,9 @@ else if (info == "newStreamAvailable") {
 
 			}
 			else {
-				document.getElementById("remoteVideoss" + obj.streamId).innerHTML = data.display_name;
+
+				var trim_data = data.display_name.substring(0, 5) + "" 
+				document.getElementById("remoteVideoss" + obj.streamId).innerHTML = trim_data;
 
 				if (data.user_type == "kec") {
 					if (data.stream_id == obj.streamId) {
@@ -2136,7 +2140,7 @@ else if (info == "leavedFromRoom") {
 		if(localStorage.getItem("kec_ids") == item)
 		{
 		var player = document.getElementById("main");
-		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;">Waiting for the Host To Join Conference</h3>';
+		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;">Waiting for KEC To Join Conference</h3>';
 
 		}
 		else if(item != localStorage.getItem("kec_ids"))
@@ -2182,7 +2186,7 @@ else if (info == "roomInformation")
 
 	if (obj_length.length < 1) {
 		var player = document.getElementById("main");
-		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;">Waiting for the Host To Join Conference</h3>';
+		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;">Waiting for KEC To Join Conference</h3>';
 
 	}
 
@@ -2203,7 +2207,7 @@ else if (info == "roomInformation")
 		if(localStorage.getItem("kec_ids") == str)
 		{
 		var player = document.getElementById("main");
-		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;">Waiting for the Host To Join Conference</h3>';
+		player.innerHTML = '<img src="images/Group 59.png" id="rp" class="img-responsive center-block"style="width: 20%;width:160px"><h3 style="text-align: center;">Waiting for KEC To Join Conference</h3>';
 
 		}
 		else if(str != localStorage.getItem("kec_ids"))
