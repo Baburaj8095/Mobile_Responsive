@@ -13,18 +13,7 @@ background-color: transparent !important;
 
 }
 
-/* 1792x828px at 326ppi */
-@media only screen and (orientation:landscape)
-    and (device-width : 414px) 
-    and (device-height : 896px) 
-    and (-webkit-device-pixel-ratio : 2) {
-video.videoBackground {
-	
-	margin-bottom:10px !important;
-	
-	    }
-	    
-}
+
 
 @media screen and (orientation:landscape) and (min-device-width: 620px) 
 and (max-device-width: 900px) and (max-height: 450px) 
@@ -175,6 +164,7 @@ textarea {
 
     .col-xs-4 {
         width: 32%;
+	    margin-top:15px;
     }
 
     .col-xs-8 {
