@@ -1013,12 +1013,12 @@ textarea {
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 250px) and (max-height: 350px)   {
 	    .admg{
-	  margin-left:-60px !important;
+	  margin-left:-65px !important;
 }
 	    
 	     .extra2
     {
-        margin-right: 40px !important;
+        margin-right: 25px !important;
         margin-top: 0px i !important;
     }
           
@@ -1047,14 +1047,13 @@ textarea {
     font-weight: bolder;
     float: right;
     width: 0% !important;
-    margin-right: 60px !important;
+    margin-right: 80px !important;
 }  
 
     .video-overlay
     {
-        font-size: 15px;
         color: white !important;
-        margin-right: 30px !important;
+        margin-right: 40px !important;
 
     }
         .ricon{
