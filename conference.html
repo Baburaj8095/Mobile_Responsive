@@ -1691,7 +1691,7 @@ formData.append('user_type', "customer");
 			) {
 			  webRTCAdaptor.sendData(publishStreamId, data);
 			} else {
-			  alert("WebRTC connection is not active.");
+			  console.log("WebRTC connection is not active.");
 			}
 		  } catch (exception) {
 			console.error(exception);
@@ -1861,6 +1861,7 @@ formData.append('user_type', "customer");
 	
 	function removeRemoteVideo(streamId) {
 		var video = document.getElementById("remoteVideo" + streamId);
+
 		if (video != null) {
 			var player = document.getElementById("player" + streamId);
 			video.srcObject = null;
