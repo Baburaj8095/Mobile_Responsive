@@ -237,12 +237,17 @@ textarea {
 and (max-device-width: 900px) and (max-height: 390px) 
 {
 	.admg{
-	  margin-left:-60px !important;
+	  margin-left:-40px !important;
 }
+	
+	.test1
+	{
+		margin-left:-8px !important;
+	}
 	
 	 .extra2
     {
-        margin-right: 40px !important;
+        margin-right: 30px !important;
         margin-top: 0px i !important;
     }
       
@@ -271,7 +276,7 @@ and (max-device-width: 900px) and (max-height: 390px)
     font-weight: bolder;
     float: right;
     width: 0% !important;
-    margin-right: 70px !important;
+    margin-right: 60px !important;
 }  
 
     .video-overlay
@@ -424,8 +429,7 @@ textarea {
     #display_name
     {
         margin-left: 63px !important;
-        font-size: 10px;
-        margin-right: 70px !important;
+        margin-right: 60px !important;
 
 
     }
