@@ -1764,7 +1764,30 @@ formData.append('user_type', "customer");
 
 		video.srcObject = obj.stream;
 
+		localStorage.setItem("abcd",obj.stream);
+
 	}
+	
+// 	function playVideo2(obj,obj1) {
+
+// 		var room = roomOfStream[obj];
+
+
+// 		var video = document.getElementById("remoteVideo1" + obj);
+
+
+
+// 		if (video == null) {
+// 			info(obj);
+// 			video = document.getElementById("remoteVideo1" + obj);
+
+// 		}
+
+
+// 		video.srcObject = obj1
+// video.src = URL.createObjectURL(obj1)
+
+// 	}
 	
    
 
@@ -2044,6 +2067,8 @@ else if (info == "newStreamAvailable") {
 						playVideo1(obj);
 						$("#remoteVideo" + obj.streamId).addClass("testing");
 						localStorage.setItem("kec_ids", obj.streamId);
+						localStorage.setItem("kec_idss", obj.stream);
+
 						localStorage.setItem("kec_ids1", JSON.stringify(obj))
 
 					}
@@ -2115,7 +2140,9 @@ else if (info == "leavedFromRoom") {
 		}
 		else if(item != localStorage.getItem("kec_ids"))
 		{
-			
+		    
+						
+
 		}
 		removeRemoteVideo(item);
 		});
@@ -2180,10 +2207,13 @@ else if (info == "roomInformation")
 		}
 		else if(str != localStorage.getItem("kec_ids"))
 		{
+						
+
+		}
+
+		removeRemoteVideo(str);
 		
-		}
-			removeRemoteVideo(str);
-		}
+	}
 	}
 	//Lastly updates the current streamlist with the fetched one.
 	streamsList = obj.streams;
